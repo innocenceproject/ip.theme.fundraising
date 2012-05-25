@@ -1,0 +1,13 @@
+/* Overrides of Plone Styles */
+div.container_24 {
+  border: 3px outset #dddddd; }
+
+#portal-personaltools {
+  position: absolute; }
+
+#portal-column-two {
+  position: static;
+  margin: 0;
+  padding-top: 20px;
+  width: 100%;
+  background-color: #eeeeee; }

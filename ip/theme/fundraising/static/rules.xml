@@ -1,0 +1,39 @@
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    css:if-content="#visual-portal-wrapper">
+
+    <theme href="theme.html" />
+    <notheme css:if-content="#content.dialog-wrapper"/>
+
+    <!-- Head: title -->
+    <replace theme="/html/head/title" content="/html/head/title" />
+
+    <!-- Base tag -->
+    <append theme="/html/head" content="/html/head/base" />
+
+    <prepend theme="/html/head" content="/html/head/meta" />
+
+    <!-- css and js includes -->
+    <after theme="/html/head/link[3]" content="/html/head/style" />
+    <after theme="/html/head/link[3]" content="/html/head/link" />
+    <append theme="/html/head" content="/html/head/script" />
+
+    <!-- Body -->
+    <merge attributes="class" css:theme="body" css:content="body" />
+
+    <replace css:theme-children="#page-content" css:content="#content" />
+    <append css:theme="#page-content" css:content="#viewlet-below-content" />
+
+    <prepend css:theme="body" css:content="#portal-personaltools" />
+
+    <!-- Edit Bar -->
+    <replace css:theme-children="#edit-bar" css:content-children="#edit-bar" />
+    <drop css:theme="#edit-bar" if-content="not(//*[@id='edit-bar'])" />
+
+    <replace css:theme-children="#page-column-right" css:content="#portal-column-two" />
+
+
+
+</rules>
