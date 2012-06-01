@@ -1,14 +1,56 @@
-/* Overrides of Plone Styles */
+/*
+Syntax error: Invalid CSS after "white": expected expression (e.g. 1px, bold), was "; }"
+        on line 2 of site.css
 
-div.container_24
-  border: 3px outset #ddd
+1: body {
+2:   background: white; }
+3: 
+4: a {
+5:   color: #993300;
+6:   text-decoration: underline; }
+7: 
 
-#portal-personaltools
-  position: absolute
-
-#portal-column-two
-  position: static
-  margin: 0
-  padding-top: 20px
-  width: 100%
-  background-color: #eee
+Backtrace:
+site.css:2
+/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/scss/parser.rb:1010:in `expected'
+/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/script/lexer.rb:191:in `expected!'
+/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/script/parser.rb:465:in `assert_done'
+/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/script/parser.rb:50:in `parse'
+/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/script/parser.rb:140:in `parse'
+/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/script.rb:31:in `parse'
+/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/engine.rb:831:in `parse_script'
+/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/engine.rb:592:in `parse_property'
+/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/engine.rb:581:in `parse_property_or_rule'
+/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/engine.rb:562:in `parse_line'
+/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/engine.rb:455:in `build_tree'
+/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/engine.rb:474:in `append_children'
+/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/engine.rb:473:in `each'
+/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/engine.rb:473:in `append_children'
+/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/engine.rb:464:in `build_tree'
+/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/engine.rb:457:in `each'
+/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/engine.rb:457:in `build_tree'
+/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/engine.rb:474:in `append_children'
+/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/engine.rb:473:in `each'
+/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/engine.rb:473:in `append_children'
+/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/engine.rb:329:in `_to_tree'
+/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/engine.rb:299:in `_render'
+/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/engine.rb:246:in `render'
+/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/plugin/compiler.rb:340:in `update_stylesheet'
+/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/plugin/compiler.rb:202:in `update_stylesheets'
+/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/plugin/compiler.rb:200:in `each'
+/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/plugin/compiler.rb:200:in `update_stylesheets'
+/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/plugin/compiler.rb:234:in `watch'
+/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/plugin.rb:107:in `send'
+/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/plugin.rb:107:in `method_missing'
+/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/exec.rb:431:in `watch_or_update'
+/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/exec.rb:302:in `process_result'
+/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/exec.rb:41:in `parse'
+/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/exec.rb:21:in `parse!'
+/var/lib/gems/1.8/gems/sass-3.1.18/bin/sass:8
+/var/lib/gems/1.8/bin/sass:19:in `load'
+/var/lib/gems/1.8/bin/sass:19
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid CSS after \"white\": expected expression (e.g. 1px, bold), was \"; }\"\A         on line 2 of site.css\A \A 1: body {\A 2:   background: white; }\A 3: \A 4: a {\A 5:   color: #993300;\A 6:   text-decoration: underline; }\A 7: "; }
