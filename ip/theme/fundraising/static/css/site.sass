@@ -1,56 +1,421 @@
-/*
-Syntax error: Invalid CSS after "white": expected expression (e.g. 1px, bold), was "; }"
-        on line 2 of site.css
+body
+  background: white
 
-1: body {
-2:   background: white; }
-3: 
-4: a {
-5:   color: #993300;
-6:   text-decoration: underline; }
-7: 
+a
+  color: #993300
+  text-decoration: underline
 
-Backtrace:
-site.css:2
-/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/scss/parser.rb:1010:in `expected'
-/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/script/lexer.rb:191:in `expected!'
-/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/script/parser.rb:465:in `assert_done'
-/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/script/parser.rb:50:in `parse'
-/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/script/parser.rb:140:in `parse'
-/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/script.rb:31:in `parse'
-/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/engine.rb:831:in `parse_script'
-/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/engine.rb:592:in `parse_property'
-/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/engine.rb:581:in `parse_property_or_rule'
-/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/engine.rb:562:in `parse_line'
-/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/engine.rb:455:in `build_tree'
-/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/engine.rb:474:in `append_children'
-/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/engine.rb:473:in `each'
-/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/engine.rb:473:in `append_children'
-/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/engine.rb:464:in `build_tree'
-/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/engine.rb:457:in `each'
-/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/engine.rb:457:in `build_tree'
-/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/engine.rb:474:in `append_children'
-/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/engine.rb:473:in `each'
-/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/engine.rb:473:in `append_children'
-/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/engine.rb:329:in `_to_tree'
-/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/engine.rb:299:in `_render'
-/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/engine.rb:246:in `render'
-/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/plugin/compiler.rb:340:in `update_stylesheet'
-/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/plugin/compiler.rb:202:in `update_stylesheets'
-/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/plugin/compiler.rb:200:in `each'
-/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/plugin/compiler.rb:200:in `update_stylesheets'
-/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/plugin/compiler.rb:234:in `watch'
-/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/plugin.rb:107:in `send'
-/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/plugin.rb:107:in `method_missing'
-/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/exec.rb:431:in `watch_or_update'
-/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/exec.rb:302:in `process_result'
-/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/exec.rb:41:in `parse'
-/var/lib/gems/1.8/gems/sass-3.1.18/bin/../lib/sass/../sass/exec.rb:21:in `parse!'
-/var/lib/gems/1.8/gems/sass-3.1.18/bin/sass:8
-/var/lib/gems/1.8/bin/sass:19:in `load'
-/var/lib/gems/1.8/bin/sass:19
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Invalid CSS after \"white\": expected expression (e.g. 1px, bold), was \"; }\"\A         on line 2 of site.css\A \A 1: body {\A 2:   background: white; }\A 3: \A 4: a {\A 5:   color: #993300;\A 6:   text-decoration: underline; }\A 7: "; }
+.container_16
+  border: 1px solid black
+
+#page-header
+  background: #cc9900 url("++theme++ip.theme.fundraising/img/page-header-background.png") repeat-x
+  color: black
+  height: 101px
+  width: 960px
+  margin-left: 0
+  padding-top: 2px
+  padding-bottom: 10px
+  margin-bottom: 10px
+
+  .page-header-text
+    display: block
+    padding-left: 40px
+
+    h1
+      padding-top: 19px
+      margin: 0
+      font-size: 21px
+
+    p
+      font-size: 13px
+
+  .page-header-action a
+    display: block
+    height: 0px
+    padding-top: 131px
+    overflow: hidden
+    width: 100%
+    background: url("++theme++ip.theme.fundraising/img/donate-now-button-big.png") no-repeat top left
+  &.small
+    background: #cc9900 url("++theme++ip.theme.fundraising/img/page-header-small-background.png") repeat-x
+    color: black
+    height: 57px
+    padding-top: 0px
+    padding-bottom: 10px
+    #page-header-text h1
+      padding-top: 18px
+
+h2.page-section-header
+  background: url("++theme++ip.theme.fundraising/img/section-header-background.png") left 35px no-repeat
+  color: #993300
+  font-weight: normal
+  font-size: 21px
+  height: 29px
+  padding: 9px 10px 11px 40px
+  margin-left: -40px
+  margin-top: 0
+
+#my-campaign-actions
+  float: right
+  width: 280px
+  padding-top: 5px
+  h5
+    display: inline
+    float: left
+    margin-right: 7px
+    font-weight: normal
+    font-size: 12px
+  ul
+    margin: 0
+    padding: 0
+    li
+      list-style: none
+      display: inline
+      padding-left: 0
+      margin-left: 0
+
+#campaign-pitch-personal
+  display: none
+  padding-top: 15px
+  h2
+    font-size: 14px
+  img
+    width: 100%
+    max-height: 140px
+
+.donation-form-wrapper
+
+  ul.tabs
+    padding: 0 !important
+    margin: 0 !important
+
+    li
+      cursor: pointer
+      list-style: none
+      display: block
+      float: left
+      margin: 0 !important
+      font-weight: normal
+      font-size: 13px
+      border-top: 1px solid transparent
+
+      .label-wrapper
+        border-top: 1px solid transparent
+        display: block
+        float: left
+        padding: 7px 10px 5px 10px
+
+        &:hover
+          .selected-indicator
+            background-position: -11px top
+
+      .selected-indicator
+        display: block
+        float: left
+        margin-right: 10px
+        margin-top: 3px
+        height: 12px
+        width: 11px
+        background: url("++theme++ip.theme.fundraising/img/radio-off-on-sprites.png") no-repeat top left
+
+      &.current
+        background-color: #eee
+        border-top: 1px solid #eee
+        
+        .label-wrapper
+          border-top: 1px solid white
+        
+        .selected-indicator
+          background-position: -11px top
+
+
+  .panels
+
+    .panel
+      background-color: #eee
+        
+
+
+form.donation-form
+  fieldset
+    border: 0 !important
+    background: #eee
+
+  fieldset.fieldset-donation-amount
+    margin-bottom: 0
+
+  width: 600px
+  .field
+    clear: both
+    margin-bottom: 20px
+    .field-inputs
+      padding-left: 100px
+    input
+      font-size: 13px
+      padding: 6px 9px
+    .field-label
+      float: left
+      width: 90px
+      font-weight: bold
+      font-size: 14px
+      padding-top: 5px
+      padding-left: 10px
+      &.wide
+        width: 400px
+    &.field-donation-amount
+      .options
+        margin-left: 100px
+        width: 400px
+      .option
+        float: left
+        margin-right: 5px
+        margin-bottom: 5px
+        input
+          display: none
+        label
+          background: url("++theme++ip.theme.fundraising/img/donation-level-button.png") no-repeat
+          width: 90px
+          height: 30px
+          padding: 6px 8px 0 0
+          display: block
+          font-size: 21px
+          font-weight: normal
+          text-align: right
+          cursor: pointer
+          line-height: 1em
+          .currency
+            display: none
+            float: left
+            font-weight: normal
+        &.selected label
+          background: url("++theme++ip.theme.fundraising/img/donation-level-button-selected.png") no-repeat
+      .field-amount
+        float: right
+        width: 155px
+        padding-top: 10px
+        label
+          display: block
+          text-align: center
+          font-weight: normal
+          font-size: 13px
+          &.currency
+            font-weight: bold
+            font-size: 24px
+            float: left
+            margin-right: 5px
+            padding-top: 11px
+        input
+          font-size: 24px
+          font-weight: bold
+          padding: 2px 4px
+          text-align: center
+          margin-bottom: 5px
+    .required
+      display: block
+      float: left
+      height: 0
+      padding-top: 9px
+      overflow: hidden
+      width: 9px
+      margin-left: -7px
+      background: url("++theme++ip.theme.fundraising/img/required.png") no-repeat
+  .after-amount
+    display: none
+
+#recurly-subscribe .recurly
+  font-family: Arial, FreeSans, sans-serif !important
+
+  .field.quantity
+    display:none
+    
+  .recurring_cost
+    display: none
+    
+  .subscription
+    display: none
+
+  .due_now
+    display: none
+
+  .vat
+    display: none
+
+  .field.vat_number
+    display: none
+
+  .inapplicable
+    display: none
+
+  .billing_info,
+  .contact_info
+    padding: 0
+    padding-left: 120px
+
+    .title
+      position: absolute
+      width: 80px
+      margin-left: -110px
+      font-weight: bold
+      font-size: 14px
+      padding-left: 10px
+      color: black
+
+    .field .title
+      position: relative
+      width: auto
+      margin-left: 0
+      padding-top: 0
+      padding-left: 0
+      padding-right: 15px
+
+    .credit_card
+      padding-top: 20px
+    
+    .accepted_cards
+      top: 50px
+      margin-left: -107px
+      right: auto
+      width: 100px
+      
+  .billing_info
+    .title  
+      padding-top: 20px
+
+#recurly-subscribe.after-amount
+  display: none
+
+#content
+  padding-left: 40px
+  width: 600px
+  h2.page-section-header
+    width: 590px
+
+#column-right
+  padding-right: 10px
+
+dl.portlet, .portlet
+  background: #eeeeee
+  padding-bottom: 5px
+  border: 1px solid #dddddd
+  margin-top: 40px
+  padding-top: 1px
+  font-size: 13px
+
+dl.portlet .portletHeader, .portlet .portletHeader
+  background-color: transparent
+  color: #555555
+  font-size: 18px
+  font-weight: bold
+  margin-top: -33px
+  padding-left: 0
+  padding-bottom: 4px
+
+dl.portlet .portletItem, .portlet .portletItem
+  padding: 15px
+  text-align: center
+  border-top: 1px solid white
+
+dl.portlet .portletItem .campaign-goal-text, .portlet .portletItem .campaign-goal-text, dl.portlet .portletItem .campaign-days-left-text, .portlet .portletItem .campaign-days-left-text
+  font-size: 14px
+  display: block
+
+dl.portlet .portletItem .campaign-raised-text, .portlet .portletItem .campaign-raised-text
+  font-size: 16px
+
+dl.portlet .portletItem .campaign-start-date, .portlet .portletItem .campaign-start-date
+  display: none
+
+dl.portlet.portletCampaignMedia
+  padding: 0
+  background-color: transparent
+  border: 0
+
+  .portletHeader
+    display: none
+
+  .portletItem
+    padding: 0
+    background-color: transparent
+
+.progress-bar
+  margin: 5px
+  border: 1px solid #555555
+  height: 20px
+
+ul.badges
+  background-color: #eeeeee
+  margin: 0
+  padding: 0
+  width: 100%
+  li
+    list-style: none
+    margin-left: 0
+    padding: 10px
+    float: left
+    width: 260px
+    margin-right: 10px
+    text-align: center
+
+#column-right ul.badges
+  background-color: transparent
+  li
+    width: 105px
+
+.count
+  text-align: center
+  width: 99px
+  .value
+    display: block
+    padding-top: 5px
+    font-size: 24px
+    font-weight: bold
+    width: 99px
+    height: 40px
+    background: url("++theme++ip.theme.fundraising/img/count-background.png") no-repeat
+
+dl.portlet.portletCampaignFundraisers
+  a
+    .count, &:link .count, &:visited .count
+      float: left
+      font-weight: bold
+      font-size: 34px
+      margin-right: 7px
+      display: block
+      padding: 0
+      margin-top: -6px
+      color: black
+      width: 70px
+      text-align: right
+  .count-text
+    text-align: left
+    display: block
+    font-size: 12px
+  a.button
+    background: url("++theme++ip.theme.fundraising/img/button-start-fundraiser.png") no-repeat
+    height: 0
+    padding: 0
+    padding-top: 40px
+    width: 175px
+    overflow: hidden
+    border: 0
+    border-radius: 0
+    -moz-border-radius: 0
+    margin-left: 34px
+    margin-top: 10px
+
+.portletCampaignStatus .count
+  margin-left: 70px
+
+.portletFooter
+  display: none
+
+p.description
+  margin-top: 10px
+  font-size: 16px
+  color: #555555
+  margin-bottom: 10px
+
+.image-left
+  float: left
+  margin: 0 15px 15px 0
