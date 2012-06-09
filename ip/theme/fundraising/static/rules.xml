@@ -12,24 +12,29 @@
 
     <!-- Base tag -->
     <append theme="/html/head" content="/html/head/base" />
-
     <prepend theme="/html/head" content="/html/head/meta" />
 
     <!-- css and js includes -->
-    <after theme="/html/head/link[6]" content="/html/head/style" />
-    <after theme="/html/head/link[6]" content="/html/head/link" />
-    <append theme="/html/head" content="/html/head/script" />
+    <after theme="/html/head/link[1]" content="/html/head/script" />
+    <after theme="/html/head/link[1]" content="/html/head/link" />
+    <after theme="/html/head/link[1]" content="/html/head/style" />
 
     <!-- Body -->
     <merge attributes="class" css:theme="body" css:content="body" />
 
-    <replace css:theme-children="#page-header h1" css:content-children="h1.documentFirstHeading" />
-    <replace css:theme-children="#page-header p.description" css:content-children=".documentDescription" />
+    <replace css:theme-children="article header.article-header h1" css:content-children="h1.documentFirstHeading" />
+    <replace css:theme-children="article header.article-header p" css:content-children=".documentDescription" />
+    <replace css:theme-children="article section.section-donation-form" css:content=".donation-form-wrapper" />
+    <replace css:theme-children="article aside#sidebar" css:content-children="#portal-column-two" />
+
+    <replace css:if-content="#content-core" css:theme-children="#content" css:content="#content-core" />
+    <replace if-content="not(//*[@id='content-core'])" css:theme-children="#content" css:content-children="#content" />
     <replace css:theme-children="#content" css:content-children="#content-core" />
     <append css:theme="#page-content" css:content="#viewlet-below-content" />
     <replace css:theme-children="#column-right" css:content-children="#portal-column-two" />
 
-    <prepend css:theme="body" css:content="#portal-personaltools" />
+    <prepend css:theme="body" css:content=".portalMessage" />-->
+    <!--<prepend css:theme="body" css:content="#portal-personaltools" />-->
 
     <!-- Edit Bar -->
     <replace css:theme-children="#edit-bar" css:content-children="#edit-bar" />

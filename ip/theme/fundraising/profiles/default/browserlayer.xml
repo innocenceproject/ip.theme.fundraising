@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<layers>
+    <layer name="ip.theme.fundraising.layer" 
+           interface="ip.theme.fundraising.interfaces.IInnocenceProjectFundraisingTheme" />
+</layers>

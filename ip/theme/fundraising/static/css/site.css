@@ -1,149 +1,330 @@
+.clear {
+  clear: both; }
+
 body {
-  background: white; }
+  background: white;
+  font-family: Arial, sans-serif; }
+
+#page-wrapper {
+  border: 1px solid #555555;
+  padding-bottom: 30px; }
+  @media screen and (max-width: 480px) {
+    #page-wrapper {
+      border: 0; } }
+
+header img {
+  width: 100%; }
 
 a {
   color: #993300;
   text-decoration: underline; }
 
-.container_16 {
-  border: 1px solid black; }
-
-#page-header {
+.article-header {
   background: #cc9900 url("++theme++ip.theme.fundraising/img/page-header-background.png") repeat-x;
   color: black;
-  height: 101px;
-  width: 960px;
-  margin-left: 0;
-  padding-top: 2px;
-  padding-bottom: 10px;
-  margin-bottom: 10px; }
-  #page-header .page-header-text {
-    display: block;
-    padding-left: 40px; }
-    #page-header .page-header-text h1 {
-      padding-top: 19px;
-      margin: 0;
-      font-size: 21px; }
-    #page-header .page-header-text p {
-      font-size: 13px; }
-  #page-header .page-header-action a {
-    display: block;
-    height: 0px;
-    padding-top: 131px;
-    overflow: hidden;
-    width: 100%;
-    background: url("++theme++ip.theme.fundraising/img/donate-now-button-big.png") no-repeat top left; }
-  #page-header.small {
-    background: #cc9900 url("++theme++ip.theme.fundraising/img/page-header-small-background.png") repeat-x;
-    color: black;
-    height: 57px;
-    padding-top: 0px;
-    padding-bottom: 10px; }
-    #page-header.small #page-header-text h1 {
-      padding-top: 18px; }
+  height: 88px;
+  margin: 0 0 10px 0;
+  padding: 3px 260px 10px 30px; }
+  @media screen and (max-width: 991px) {
+    .article-header {
+      padding-right: 10px; } }
+  @media screen and (max-width: 767px) {
+    .article-header {
+      padding-left: 18px; } }
+  @media screen and (max-width: 480px) {
+    .article-header {
+      padding-left: 15px; } }
+  .article-header h1 {
+    margin: 0;
+    padding: 5px 0;
+    line-height: 1.2em;
+    font-size: 24px; }
+    @media screen and (max-width: 991px) {
+      .article-header h1 {
+        font-size: 20px; } }
+    @media screen and (max-width: 767px) {
+      .article-header h1 {
+        font-size: 18px;
+        line-height: 1em; } }
+    @media screen and (max-width: 480px) {
+      .article-header h1 {
+        font-size: 15px;
+        line-height: 1.1em;
+        padding-top: 0; } }
+  .article-header p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.2em;
+    color: black; }
+    @media screen and (max-width: 991px) {
+      .article-header p {
+        font-size: 13px; } }
+    @media screen and (max-width: 767px) {
+      .article-header p {
+        font-size: 11px;
+        line-height: 1em; } }
+    @media screen and (max-width: 480px) {
+      .article-header p {
+        font-size: 10px;
+        line-height: 1.1em; } }
 
-h2.page-section-header {
+h2 {
   background: url("++theme++ip.theme.fundraising/img/section-header-background.png") left 35px no-repeat;
   color: #993300;
   font-weight: normal;
   font-size: 21px;
   height: 29px;
-  padding: 9px 10px 11px 40px;
-  margin-left: -40px;
-  margin-top: 0; }
-
-#my-campaign-actions {
-  float: right;
-  width: 280px;
-  padding-top: 5px; }
-  #my-campaign-actions h5 {
-    display: inline;
-    float: left;
-    margin-right: 7px;
-    font-weight: normal;
-    font-size: 12px; }
-  #my-campaign-actions ul {
-    margin: 0;
-    padding: 0; }
-    #my-campaign-actions ul li {
-      list-style: none;
-      display: inline;
-      padding-left: 0;
-      margin-left: 0; }
-
-#campaign-pitch-personal {
-  display: none;
-  padding-top: 15px; }
-  #campaign-pitch-personal h2 {
-    font-size: 14px; }
-  #campaign-pitch-personal img {
-    width: 100%;
-    max-height: 140px; }
-
-.donation-form-wrapper ul.tabs {
-  padding: 0 !important;
-  margin: 0 !important; }
-  .donation-form-wrapper ul.tabs li {
-    cursor: pointer;
-    list-style: none;
-    display: block;
-    float: left;
-    margin: 0 !important;
-    font-weight: normal;
-    font-size: 13px;
-    border-top: 1px solid transparent; }
-    .donation-form-wrapper ul.tabs li .label-wrapper {
-      border-top: 1px solid transparent;
-      display: block;
-      float: left;
-      padding: 7px 10px 5px 10px; }
-      .donation-form-wrapper ul.tabs li .label-wrapper:hover .selected-indicator {
-        background-position: -11px top; }
-    .donation-form-wrapper ul.tabs li .selected-indicator {
-      display: block;
-      float: left;
-      margin-right: 10px;
-      margin-top: 3px;
-      height: 12px;
-      width: 11px;
-      background: url("++theme++ip.theme.fundraising/img/radio-off-on-sprites.png") no-repeat top left; }
-    .donation-form-wrapper ul.tabs li.current {
-      background-color: #eeeeee;
-      border-top: 1px solid #eeeeee; }
-      .donation-form-wrapper ul.tabs li.current .label-wrapper {
-        border-top: 1px solid white; }
-      .donation-form-wrapper ul.tabs li.current .selected-indicator {
-        background-position: -11px top; }
-.donation-form-wrapper .panels .panel {
-  background-color: #eeeeee; }
-
-form.donation-form {
-  width: 600px; }
-  form.donation-form fieldset {
-    border: 0 !important;
-    background: #eeeeee; }
-  form.donation-form fieldset.fieldset-donation-amount {
-    margin-bottom: 0; }
-  form.donation-form .field {
-    clear: both;
-    margin-bottom: 20px; }
-    form.donation-form .field .field-inputs {
-      padding-left: 100px; }
-    form.donation-form .field input {
-      font-size: 13px;
-      padding: 6px 9px; }
-    form.donation-form .field .field-label {
-      float: left;
-      width: 90px;
-      font-weight: bold;
+  padding: 9px 10px 20px 40px;
+  margin: 0 0 0 -40px; }
+  @media screen and (max-width: 767px) {
+    h2 {
+      font-size: 17px;
+      background-position: left 29px; } }
+  @media screen and (max-width: 480px) {
+    h2 {
       font-size: 14px;
-      padding-top: 5px;
-      padding-left: 10px; }
-      form.donation-form .field .field-label.wide {
-        width: 400px; }
+      background-position: left 25px; } }
+
+article aside {
+  width: 280px;
+  float: right; }
+  article aside img {
+    width: 100%; }
+  article aside iframe {
+    width: 100%; }
+  @media screen and (max-width: 991px) {
+    article aside {
+      width: 708px;
+      padding: 10px 30px;
+      float: none; } }
+  @media screen and (max-width: 767px) {
+    article aside {
+      width: 480px;
+      padding: 10px 18px;
+      float: none; } }
+  @media screen and (max-width: 480px) {
+    article aside {
+      width: 290px;
+      padding: 10px 15px;
+      float: none; } }
+article section,
+article div#content {
+  width: 620px;
+  float: left;
+  padding-left: 30px;
+  margin: 0; }
+  @media screen and (max-width: 991px) {
+    article section,
+    article div#content {
+      width: 650px;
+      padding-right: 30px;
+      float: none; } }
+  @media screen and (max-width: 767px) {
+    article section,
+    article div#content {
+      width: 400px;
+      float: none;
+      padding-left: 18px; } }
+  @media screen and (max-width: 480px) {
+    article section,
+    article div#content {
+      width: 300px;
+      float: none;
+      padding-left: 15px; } }
+  article section header,
+  article section h2,
+  article div#content header,
+  article div#content h2 {
+    margin-left: -30px;
+    padding-left: 30px; }
+    @media screen and (max-width: 767px) {
+      article section header,
+      article section h2,
+      article div#content header,
+      article div#content h2 {
+        margin-left: -18px;
+        padding-left: 18px; } }
+    @media screen and (max-width: 480px) {
+      article section header,
+      article section h2,
+      article div#content header,
+      article div#content h2 {
+        margin-left: -15px;
+        padding-left: 15px; } }
+article .portlet {
+  width: 258px;
+  margin: 30px 0 50px 0;
+  background-color: #eeeeee;
+  border: 1px solid #dddddd;
+  padding-top: 1px; }
+  @media screen and (max-width: 991px) {
+    article .portlet {
+      float: left;
+      width: 310px;
+      margin-right: 30px;
+      margin-top: 20px; } }
+  @media screen and (max-width: 767px) {
+    article .portlet {
+      width: 190px;
+      margin-right: 20px;
+      float: left;
+      margin-top: 20px; } }
+  @media screen and (max-width: 480px) {
+    article .portlet {
+      width: 100%;
+      margin-right: 0px;
+      float: left;
+      margin-top: 20px; } }
+  article .portlet .portletFooter {
+    display: none; }
+
+#content .portlet {
+  width: 100%;
+  margin-top: 40px;
+  font-size: 14px; }
+  #content .portlet dd.portletItem {
+    padding: 30px;
+    margin: 0;
+    text-align: left; }
+  #content .portlet .portletFooter {
+    display: none; }
+
+.next-steps h2 {
+  margin: 20px 0 0 0; }
+
+.donation-receipt-wrapper {
+  padding: 30px; }
+
+.h5-active.ui-state-error {
+  background-color: #993300; }
+
+.donation-form-wrapper {
+  margin-bottom: 20px; }
+  .donation-form-wrapper ul.tabs {
+    padding: 0 !important;
+    margin: 0 !important; }
+    .donation-form-wrapper ul.tabs li {
+      cursor: pointer;
+      list-style: none;
+      display: block;
+      float: left;
+      margin: 0 !important;
+      font-weight: normal;
+      font-size: 13px;
+      border-top: 1px solid transparent; }
+      .donation-form-wrapper ul.tabs li .label-wrapper {
+        border-top: 1px solid transparent;
+        display: block;
+        float: left;
+        padding: 7px 10px 5px 10px; }
+        .donation-form-wrapper ul.tabs li .label-wrapper:hover .selected-indicator {
+          background-position: -11px top; }
+      .donation-form-wrapper ul.tabs li .selected-indicator {
+        display: block;
+        float: left;
+        margin-right: 10px;
+        margin-top: 3px;
+        height: 12px;
+        width: 11px;
+        background: url("++theme++ip.theme.fundraising/img/radio-off-on-sprites.png") no-repeat top left; }
+      .donation-form-wrapper ul.tabs li.current {
+        background-color: #eeeeee;
+        border-top: 1px solid #eeeeee; }
+        .donation-form-wrapper ul.tabs li.current .label-wrapper {
+          border-top: 1px solid white; }
+        .donation-form-wrapper ul.tabs li.current .selected-indicator {
+          background-position: -11px top; }
+  .donation-form-wrapper .panels .panel {
+    background-color: #eeeeee;
+    padding-bottom: 5px;
+    display: none; }
+  .donation-form-wrapper .after-amount {
+    display: none; }
+
+form.donation-form fieldset {
+  margin: 0;
+  padding: 20px 20px 20px 110px;
+  border: 0 !important;
+  background: url("++resource++collective.salesforce.fundraising.static/recurly-theme/images/dash.png") repeat-x left top; }
+  form.donation-form fieldset.fieldset-donation-amount {
+    padding-bottom: 0;
+    background-image: none; }
+  @media screen and (max-width: 991px) {
+    form.donation-form fieldset {
+      padding-left: 120px; } }
+  @media screen and (max-width: 767px) {
+    form.donation-form fieldset {
+      clear: both;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      padding-left: 20px; } }
+  @media screen and (max-width: 480px) {
+    form.donation-form fieldset {
+      padding-left: 20px; } }
+form.donation-form legend {
+  position: absolute;
+  width: 70px;
+  margin-left: -100px;
+  margin-top: -10px;
+  padding: 0 0 0 10px;
+  background-color: transparent;
+  display: block;
+  border: 0;
+  font-weight: bold;
+  font-size: 14px !important;
+  color: black; }
+  @media screen and (max-width: 767px) {
+    form.donation-form legend {
+      width: 100%;
+      margin-left: 0;
+      float: none;
+      clear: both;
+      margin-bottom: 30px;
+      padding-bottom: 0;
+      font-size: 12px !important; } }
+  @media screen and (max-width: 480px) {
+    form.donation-form legend {
+      width: 100%;
+      margin-left: 0;
+      float: none;
+      clear: both;
+      margin-bottom: 30px;
+      padding-bottom: 0;
+      font-size: 11px !important; } }
+form.donation-form .field {
+  clear: both;
+  margin-bottom: 20px;
+  width: 300px; }
+  @media screen and (max-width: 991px) {
+    form.donation-form .field {
+      width: 340px; } }
+  @media screen and (max-width: 767px) {
+    form.donation-form .field {
+      width: 310px;
+      padding: 14px; } }
+  @media screen and (max-width: 480px) {
+    form.donation-form .field {
+      width: 300px;
+      padding: 10px; } }
+  form.donation-form .field input {
+    border: 1px solid #a0a0a5;
+    font-size: 16px;
+    padding: 7px 5px;
+    width: 100%; }
+  form.donation-form .field select {
+    background: transparent;
+    padding: 7px 5px;
+    font-size: 16px;
+    width: 100%; }
+  form.donation-form .field.field-donation-amount {
+    width: 100%; }
     form.donation-form .field.field-donation-amount .options {
-      margin-left: 100px;
-      width: 400px; }
+      width: 64%;
+      margin-right: 5%; }
+      @media screen and (max-width: 767px) {
+        form.donation-form .field.field-donation-amount .options {
+          width: 100%;
+          margin-bottom: 60px; } }
     form.donation-form .field.field-donation-amount .option {
       float: left;
       margin-right: 5px;
@@ -162,15 +343,23 @@ form.donation-form {
         cursor: pointer;
         line-height: 1em; }
         form.donation-form .field.field-donation-amount .option label .currency {
-          display: none;
-          float: left;
-          font-weight: normal; }
+          display: none; }
       form.donation-form .field.field-donation-amount .option.selected label {
         background: url("++theme++ip.theme.fundraising/img/donation-level-button-selected.png") no-repeat; }
     form.donation-form .field.field-donation-amount .field-amount {
       float: right;
-      width: 155px;
-      padding-top: 10px; }
+      width: 33%; }
+      @media screen and (max-width: 767px) {
+        form.donation-form .field.field-donation-amount .field-amount {
+          width: 200px;
+          clear: both;
+          position: absolute;
+          margin-top: 90px;
+          margin-left: -28px; } }
+      @media screen and (max-width: 480px) {
+        form.donation-form .field.field-donation-amount .field-amount {
+          margin-top: 130px;
+          margin-left: 0; } }
       form.donation-form .field.field-donation-amount .field-amount label {
         display: block;
         text-align: center;
@@ -180,92 +369,192 @@ form.donation-form {
           font-weight: bold;
           font-size: 24px;
           float: left;
-          margin-right: 5px;
+          width: 10%;
+          margin-right: 5%;
           padding-top: 11px; }
       form.donation-form .field.field-donation-amount .field-amount input {
-        font-size: 24px;
+        background: url("++theme++ip.theme.fundraising/img/amount-field-background.png") repeat-x top left;
+        color: #555555;
+        font-size: 30px;
         font-weight: bold;
         padding: 2px 4px;
         text-align: center;
-        margin-bottom: 5px; }
-    form.donation-form .field .required {
-      display: block;
-      float: left;
-      height: 0;
-      padding-top: 9px;
-      overflow: hidden;
-      width: 9px;
-      margin-left: -7px;
-      background: url("++theme++ip.theme.fundraising/img/required.png") no-repeat; }
-  form.donation-form .after-amount {
+        margin-bottom: 5px;
+        width: 70%; }
+        @media screen and (max-width: 767px) {
+          form.donation-form .field.field-donation-amount .field-amount input {
+            font-size: 26px; } }
+        @media screen and (max-width: 480px) {
+          form.donation-form .field.field-donation-amount .field-amount input {
+            font-size: 24px; } }
+  form.donation-form .field.field-is-honorary input {
+    float: left;
+    width: auto;
+    margin-top: 2px;
+    margin-right: 10px; }
+  form.donation-form .field .subfield {
+    float: left;
+    width: 45%;
+    margin-right: 5%;
+    padding-bottom: 20px; }
+    form.donation-form .field .subfield.subfield-city, form.donation-form .field .subfield.subfield-address, form.donation-form .field .subfield.subfield-country {
+      width: 95%;
+      clear: both; }
+    form.donation-form .field .subfield.subfield-email-signup {
+      width: 95%;
+      clear: both; }
+      form.donation-form .field .subfield.subfield-email-signup input {
+        float: left;
+        width: auto;
+        margin-top: 2px;
+        margin-right: 10px; }
+    form.donation-form .field .subfield.subfield-state {
+      padding-top: 7px; }
+      form.donation-form .field .subfield.subfield-state input {
+        display: none; }
+      form.donation-form .field .subfield.subfield-state.international select {
+        display: none; }
+      form.donation-form .field .subfield.subfield-state.international input {
+        display: block; }
+    form.donation-form .field .subfield.subfield-card-number {
+      width: 75%; }
+    form.donation-form .field .subfield.subfield-card-cvv {
+      width: 15%; }
+      form.donation-form .field .subfield.subfield-card-cvv .field-help {
+        text-align: right;
+        width: 120px;
+        margin-left: -50px; }
+    form.donation-form .field .subfield.subfield-expiration-date {
+      width: 95%;
+      margin-top: -10px;
+      padding-top: 0; }
+      form.donation-form .field .subfield.subfield-expiration-date label {
+        display: block;
+        clear: both; }
+      form.donation-form .field .subfield.subfield-expiration-date .subfield-expiration-month {
+        width: 60%; }
+      form.donation-form .field .subfield.subfield-expiration-date .subfield-expiration-year {
+        width: 35%;
+        margin-right: 0; }
+    form.donation-form .field .subfield .field-help {
+      color: #555555;
+      font-size: 12px; }
+  form.donation-form .field .accepted-cards {
+    position: absolute;
+    margin-top: 47px; }
+  form.donation-form .field .required {
     display: none; }
+
+.ssl-cert-seal {
+  float: right;
+  margin-top: -434px;
+  margin-right: 40px; }
+
+.panel-donation_form_recurly .ssl-cert-seal {
+  margin-top: -455px; }
+
+.donation-form-error {
+  border: 3px solid #993300;
+  padding: 15px 30px;
+  margin: 30px;
+  border-radius: 10px;
+  -moz-border-radius: 10px; }
+  .donation-form-error h5 {
+    color: #993300;
+    font-size: 18px; }
+  .donation-form-error em {
+    display: block;
+    padding: 0 30px; }
 
 #recurly-subscribe .recurly {
+  width: 100%;
   font-family: Arial, FreeSans, sans-serif !important; }
-  #recurly-subscribe .recurly .recurring_cost {
+  #recurly-subscribe .recurly select {
+    background: transparent;
+    padding: 7px 5px;
+    font-size: 16px;
+    width: 100%; }
+  #recurly-subscribe .recurly .recurring_cost, #recurly-subscribe .recurly .subscription, #recurly-subscribe .recurly .due_now, #recurly-subscribe .recurly .vat, #recurly-subscribe .recurly .field.vat_number, #recurly-subscribe .recurly .inapplicable {
     display: none; }
-  #recurly-subscribe .recurly .subscription {
-    display: none; }
-  #recurly-subscribe .recurly .due_now {
-    display: none; }
-  #recurly-subscribe .recurly .vat {
-    display: none; }
-  #recurly-subscribe .recurly .field.vat_number {
-    display: none; }
-  #recurly-subscribe .recurly .inapplicable {
-    display: none; }
-  #recurly-subscribe .recurly .billing_info,
-  #recurly-subscribe .recurly .contact_info {
+  #recurly-subscribe .recurly .billing_info, #recurly-subscribe .recurly .contact_info {
     padding: 0;
     padding-left: 120px; }
-    #recurly-subscribe .recurly .billing_info .title,
-    #recurly-subscribe .recurly .contact_info .title {
-      position: absolute;
-      width: 80px;
-      margin-left: -110px;
-      font-weight: bold;
-      font-size: 14px;
-      padding-left: 10px;
-      color: black; }
-    #recurly-subscribe .recurly .billing_info .field .title,
-    #recurly-subscribe .recurly .contact_info .field .title {
-      position: relative;
-      width: auto;
-      margin-left: 0;
-      padding-top: 0;
-      padding-left: 0;
-      padding-right: 15px; }
-    #recurly-subscribe .recurly .billing_info .credit_card,
-    #recurly-subscribe .recurly .contact_info .credit_card {
-      padding-top: 20px; }
-    #recurly-subscribe .recurly .billing_info .accepted_cards,
-    #recurly-subscribe .recurly .contact_info .accepted_cards {
-      top: 50px;
-      margin-left: -107px;
-      right: auto;
-      width: 100px; }
+    @media screen and (max-width: 767px) {
+      #recurly-subscribe .recurly .billing_info, #recurly-subscribe .recurly .contact_info {
+        clear: both;
+        width: 100%;
+        padding-left: 20px; } }
+  #recurly-subscribe .recurly .billing_info .title, #recurly-subscribe .recurly .contact_info .title {
+    position: absolute;
+    width: 80px;
+    margin-left: -110px;
+    font-weight: bold;
+    font-size: 14px;
+    padding-left: 10px;
+    color: black; }
+    @media screen and (max-width: 767px) {
+      #recurly-subscribe .recurly .billing_info .title, #recurly-subscribe .recurly .contact_info .title {
+        clear: both;
+        width: 100%;
+        padding-left: 20px;
+        position: relative;
+        width: auto;
+        margin-left: 0;
+        padding-top: 0;
+        padding-left: 0;
+        padding-right: 15px; } }
+  #recurly-subscribe .recurly .billing_info .credit_card, #recurly-subscribe .recurly .contact_info .credit_card {
+    padding-top: 20px; }
+  #recurly-subscribe .recurly .billing_info .accepted_cards, #recurly-subscribe .recurly .contact_info .accepted_cards {
+    top: 70px;
+    margin-left: -107px;
+    right: auto;
+    width: 100px; }
+  #recurly-subscribe .recurly .billing_info .address2, #recurly-subscribe .recurly .contact_info .address2 {
+    display: none; }
   #recurly-subscribe .recurly .billing_info .title {
     padding-top: 20px; }
-
+  #recurly-subscribe .recurly .expires {
+    height: 80px; }
+    #recurly-subscribe .recurly .expires .title {
+      position: static;
+      clear: both;
+      float: none;
+      padding: 0;
+      margin: 0 0 4px 0; }
+    #recurly-subscribe .recurly .expires .month {
+      width: 65%;
+      margin-right: 5%;
+      float: left; }
+    #recurly-subscribe .recurly .expires .year {
+      width: 25%;
+      float: left;
+      margin-right: 0; }
 #recurly-subscribe.after-amount {
   display: none; }
+#recurly-subscribe .error {
+  /* supply height to ensure consistent positioning for every browser */
+  height: 15px;
+  background-color: #fffe36;
+  border: 1px solid #e1e16d;
+  font-size: 11px;
+  color: black;
+  padding: 3px 10px;
+  margin-left: -2px;
+  /* CSS3 spicing for mozilla and webkit */
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -moz-box-shadow: 0 0 6px #dddddd;
+  -webkit-box-shadow: 0 0 6px #dddddd; }
 
-#content {
-  padding-left: 40px;
-  width: 600px; }
-  #content h2.page-section-header {
-    width: 590px; }
-
-#column-right {
-  padding-right: 10px; }
-
-dl.portlet, .portlet {
-  background: #eeeeee;
-  padding-bottom: 5px;
-  border: 1px solid #dddddd;
-  margin-top: 40px;
-  padding-top: 1px;
-  font-size: 13px; }
+dl.portlet .portletItem, .portlet .portletItem {
+  padding: 15px;
+  text-align: center;
+  border-top: 1px solid white; }
 
 dl.portlet .portletHeader, .portlet .portletHeader {
   background-color: transparent;
@@ -276,22 +565,28 @@ dl.portlet .portletHeader, .portlet .portletHeader {
   padding-left: 0;
   padding-bottom: 4px; }
 
-dl.portlet .portletItem, .portlet .portletItem {
-  padding: 15px;
-  text-align: center;
-  border-top: 1px solid white; }
+aside dl.portlet .portletHeader, .portlet .portletHeader a,
+aside dl.portlet .portletHeader, .portlet .portletHeader a:hover {
+  color: #555555 !important; }
 
-dl.portlet .portletItem .campaign-goal-text, .portlet .portletItem .campaign-goal-text, dl.portlet .portletItem .campaign-days-left-text, .portlet .portletItem .campaign-days-left-text {
+dl.portlet .campaign-goal-text, .portlet .campaign-goal-text, dl.portlet .campaign-days-left-text, .portlet .campaign-days-left-text {
   font-size: 14px;
   display: block; }
+  @media screen and (max-width: 767px) {
+    dl.portlet .campaign-goal-text, .portlet .campaign-goal-text, dl.portlet .campaign-days-left-text, .portlet .campaign-days-left-text {
+      font-size: 10px; } }
 
-dl.portlet .portletItem .campaign-raised-text, .portlet .portletItem .campaign-raised-text {
+dl.portlet .campaign-raised-text, .portlet .campaign-raised-text {
   font-size: 16px; }
+  @media screen and (max-width: 767px) {
+    dl.portlet .campaign-raised-text, .portlet .campaign-raised-text {
+      font-size: 11px; } }
 
-dl.portlet .portletItem .campaign-start-date, .portlet .portletItem .campaign-start-date {
+dl.portlet .campaign-start-date, .portlet .campaign-start-date {
   display: none; }
 
 dl.portlet.portletCampaignMedia {
+  margin-top: 10px;
   padding: 0;
   background-color: transparent;
   border: 0; }
@@ -304,38 +599,17 @@ dl.portlet.portletCampaignMedia {
 .progress-bar {
   margin: 5px;
   border: 1px solid #555555;
-  height: 20px; }
-
-ul.badges {
-  background-color: #eeeeee;
-  margin: 0;
-  padding: 0;
-  width: 100%; }
-  ul.badges li {
-    list-style: none;
-    margin-left: 0;
-    padding: 10px;
-    float: left;
-    width: 260px;
-    margin-right: 10px;
-    text-align: center; }
-
-#column-right ul.badges {
-  background-color: transparent; }
-  #column-right ul.badges li {
-    width: 105px; }
-
-.count {
-  text-align: center;
-  width: 99px; }
-  .count .value {
-    display: block;
-    padding-top: 5px;
-    font-size: 24px;
-    font-weight: bold;
-    width: 99px;
-    height: 40px;
-    background: url("++theme++ip.theme.fundraising/img/count-background.png") no-repeat; }
+  height: 19px;
+  overflow: hidden;
+  background: #eeeeee url("++theme++ip.theme.fundraising/img/progress-bar-background.png") repeat-x left center; }
+  .progress-bar .progress {
+    margin: 0;
+    border: 0;
+    height: 29px;
+    padding: 0;
+    background: #993300 url("++theme++ip.theme.fundraising/img/progress-bar-progress-background.png") no-repeat right top; }
+  .progress-bar div.text, .progress-bar div.progress .text {
+    display: none; }
 
 dl.portlet.portletCampaignFundraisers a .count, dl.portlet.portletCampaignFundraisers a:link .count, dl.portlet.portletCampaignFundraisers a:visited .count {
   float: left;
@@ -358,25 +632,66 @@ dl.portlet.portletCampaignFundraisers a.button {
   padding: 0;
   padding-top: 40px;
   width: 175px;
+  margin: 34px auto 10px auto;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+  -moz-border-radius: 0; }
+
+.donor-quote {
+  text-align: left;
+  font-size: 12px; }
+  .donor-quote img {
+    float: left;
+    display: block;
+    margin: 0 15px 15px 0;
+    max-width: 32px;
+    min-width: 32px; }
+  .donor-quote p {
+    margin-bottom: 0 !important;
+    padding-left: 50px; }
+  .donor-quote .donor-name {
+    font-weight: bold;
+    padding-left: 50px;
+    padding-top: 3px; }
+
+.recurly .footer,
+.form-buttons {
+  margin-left: 110px;
+  padding-bottom: 20px; }
+
+.donation-form-wrapper .recurly button,
+.form-buttons input,
+a.button {
+  background: url("++theme++ip.theme.fundraising/img/button.png") no-repeat;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 6px 10px;
+  height: 40px;
+  width: 175px;
   overflow: hidden;
   border: 0;
   border-radius: 0;
   -moz-border-radius: 0;
-  margin-left: 34px;
-  margin-top: 10px; }
+  cursor: pointer;
+  box-shadow: none; }
+  .donation-form-wrapper .recurly button:hover,
+  .form-buttons input:hover,
+  a.button:hover {
+    color: white !important; }
 
-.portletCampaignStatus .count {
-  margin-left: 70px; }
-
-.portletFooter {
-  display: none; }
-
-p.description {
-  margin-top: 10px;
-  font-size: 16px;
-  color: #555555;
-  margin-bottom: 10px; }
-
-.image-left {
-  float: left;
-  margin: 0 15px 15px 0; }
+#edit-bar {
+  background-color: #993300;
+  border: 0.25em solid #993300;
+  border-bottom: 0; }
+  #edit-bar #content-views {
+    background-color: #993300 !important; }
+  #edit-bar #contentActionMenus {
+    background-color: #993300 !important; }
+    #edit-bar #contentActionMenus dl.actionMenu a,
+    #edit-bar #contentActionMenus dl.actionMenu.activated dd {
+      background-color: #993300 !important; }
+    #edit-bar #contentActionMenus dl.actionMenu.activated dd {
+      border-bottom: 0.5em solid #993300 !important; }

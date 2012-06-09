@@ -1,90 +1,218 @@
+$screen-tablet-min: 768px
+$screen-tablet-max: 991px
+$screen-phone-max: 767px
+$screen-phone-wide-min: 480px
+
+$red: #993300
+$yellow: #cc9900
+
+.clear
+  clear: both
+
 body
   background: white
+  font-family: Arial, sans-serif
+
+#page-wrapper
+  border: 1px solid #555
+  padding-bottom: 30px
+
+  @media screen and (max-width: $screen-phone-wide-min)
+    border: 0
+
+header
+  img
+    width: 100%
 
 a
-  color: #993300
+  color: $red
   text-decoration: underline
 
-.container_16
-  border: 1px solid black
-
-#page-header
-  background: #cc9900 url("++theme++ip.theme.fundraising/img/page-header-background.png") repeat-x
+.article-header
+  background: $yellow url("++theme++ip.theme.fundraising/img/page-header-background.png") repeat-x
   color: black
-  height: 101px
-  width: 960px
-  margin-left: 0
-  padding-top: 2px
-  padding-bottom: 10px
-  margin-bottom: 10px
+  height: 88px
+  margin: 0 0 10px 0
+  padding: 3px 260px 10px 30px
 
-  .page-header-text
-    display: block
-    padding-left: 40px
+  @media screen and (max-width: $screen-tablet-max)
+    padding-right: 10px
+  @media screen and (max-width: $screen-phone-max)
+    padding-left: 18px
+  @media screen and (max-width: $screen-phone-wide-min)
+    padding-left: 15px
 
-    h1
-      padding-top: 19px
-      margin: 0
-      font-size: 21px
+  h1
+    margin: 0
+    padding: 5px 0
+    line-height: 1.2em
+    font-size: 24px
 
-    p
+    @media screen and (max-width: $screen-tablet-max)
+      font-size: 20px
+    
+    @media screen and (max-width: $screen-phone-max)
+      font-size: 18px
+      line-height: 1em
+
+    @media screen and (max-width: $screen-phone-wide-min)
+      font-size: 15px
+      line-height: 1.1em
+      padding-top: 0
+
+  p
+    margin: 0
+    font-size: 14px
+    line-height: 1.2em
+    color: black
+
+    @media screen and (max-width: $screen-tablet-max)
       font-size: 13px
 
-  .page-header-action a
-    display: block
-    height: 0px
-    padding-top: 131px
-    overflow: hidden
-    width: 100%
-    background: url("++theme++ip.theme.fundraising/img/donate-now-button-big.png") no-repeat top left
-  &.small
-    background: #cc9900 url("++theme++ip.theme.fundraising/img/page-header-small-background.png") repeat-x
-    color: black
-    height: 57px
-    padding-top: 0px
-    padding-bottom: 10px
-    #page-header-text h1
-      padding-top: 18px
+    @media screen and (max-width: $screen-phone-max)
+      font-size: 11px
+      line-height: 1em
 
-h2.page-section-header
+    @media screen and (max-width: $screen-phone-wide-min)
+      font-size: 10px
+      line-height: 1.1em
+
+h2
   background: url("++theme++ip.theme.fundraising/img/section-header-background.png") left 35px no-repeat
-  color: #993300
+  color: $red
   font-weight: normal
   font-size: 21px
   height: 29px
-  padding: 9px 10px 11px 40px
-  margin-left: -40px
-  margin-top: 0
+  padding: 9px 10px 20px 40px
+  margin: 0 0 0 -40px
 
-#my-campaign-actions
-  float: right
-  width: 280px
-  padding-top: 5px
-  h5
-    display: inline
-    float: left
-    margin-right: 7px
-    font-weight: normal
-    font-size: 12px
-  ul
-    margin: 0
-    padding: 0
-    li
-      list-style: none
-      display: inline
-      padding-left: 0
-      margin-left: 0
+  @media screen and (max-width: $screen-tablet-max)
 
-#campaign-pitch-personal
-  display: none
-  padding-top: 15px
-  h2
+  @media screen and (max-width: $screen-phone-max)
+    font-size: 17px
+    background-position: left 29px
+
+  @media screen and (max-width: $screen-phone-wide-min)
     font-size: 14px
-  img
-    width: 100%
-    max-height: 140px
+    background-position: left 25px
+
+
+article
+
+  aside
+    width: 280px
+    float: right
+
+    img
+      width: 100%
+
+    iframe
+      width: 100%
+
+    @media screen and (max-width: $screen-tablet-max)
+      width: 708px
+      padding: 10px 30px
+      float: none
+
+    @media screen and (max-width: $screen-phone-max)
+      width: 480px
+      padding: 10px 18px
+      float: none
+
+    @media screen and (max-width: $screen-phone-wide-min)
+      width: 290px
+      padding: 10px 15px
+      float: none
+
+  section,
+  div#content
+    width: 620px
+    float: left
+    padding-left: 30px
+    margin: 0
+
+    @media screen and (max-width: $screen-tablet-max)
+      width: 650px
+      padding-right: 30px
+      float: none
+  
+    @media screen and (max-width: $screen-phone-max)
+      width: 400px
+      float: none
+      padding-left: 18px
+  
+    @media screen and (max-width: $screen-phone-wide-min)
+      width: 300px
+      float: none
+      padding-left: 15px
+
+    header,
+    h2
+      margin-left: -30px
+      padding-left: 30px
+    
+      @media screen and (max-width: $screen-phone-max)
+        margin-left: -18px
+        padding-left: 18px
+    
+      @media screen and (max-width: $screen-phone-wide-min)
+        margin-left: -15px
+        padding-left: 15px
+
+  .portlet
+    width: 258px
+    margin: 30px 0 50px 0
+    background-color: #eee
+    border: 1px solid #ddd
+    padding-top: 1px
+  
+    @media screen and (max-width: $screen-tablet-max)
+      float: left
+      width: 310px
+      margin-right: 30px
+      margin-top: 20px
+  
+    @media screen and (max-width: $screen-phone-max)
+      width: 190px
+      margin-right: 20px
+      float: left
+      margin-top: 20px
+  
+    @media screen and (max-width: $screen-phone-wide-min)
+      width: 100%
+      margin-right: 0px
+      float: left
+      margin-top: 20px
+  
+    .portletFooter
+      display: none
+
+#content .portlet
+  width: 100%
+  margin-top: 40px
+  font-size: 14px
+  
+  dd.portletItem
+    padding: 30px
+    margin: 0
+    text-align: left
+
+  .portletFooter
+    display: none
+
+.next-steps
+  h2
+    margin: 20px 0 0 0
+
+
+.donation-receipt-wrapper
+  padding: 30px
+
+.h5-active.ui-state-error
+  background-color: $red
 
 .donation-form-wrapper
+  margin-bottom: 20px
 
   ul.tabs
     padding: 0 !important
@@ -105,10 +233,8 @@ h2.page-section-header
         display: block
         float: left
         padding: 7px 10px 5px 10px
-
-        &:hover
-          .selected-indicator
-            background-position: -11px top
+        &:hover .selected-indicator
+          background-position: -11px top
 
       .selected-indicator
         display: block
@@ -120,59 +246,129 @@ h2.page-section-header
         background: url("++theme++ip.theme.fundraising/img/radio-off-on-sprites.png") no-repeat top left
 
       &.current
-        background-color: #eee
-        border-top: 1px solid #eee
-        
+        background-color: #eeeeee
+        border-top: 1px solid #eeeeee
         .label-wrapper
           border-top: 1px solid white
-        
         .selected-indicator
           background-position: -11px top
 
+  .panels .panel
+    background-color: #eeeeee
+    padding-bottom: 5px
+    display: none
 
-  .panels
-
-    .panel
-      background-color: #eee
-        
+  .after-amount
+    display: none
 
 
 form.donation-form
+
   fieldset
+    margin: 0
+    padding: 20px 20px 20px 110px
     border: 0 !important
-    background: #eee
+    background: url("++resource++collective.salesforce.fundraising.static/recurly-theme/images/dash.png") repeat-x left top
 
-  fieldset.fieldset-donation-amount
-    margin-bottom: 0
+    &.fieldset-donation-amount
+      padding-bottom: 0
+      background-image: none
 
-  width: 600px
+    @media screen and (max-width: $screen-tablet-max)
+      padding-left: 120px
+  
+    @media screen and (max-width: $screen-phone-max)
+      clear: both
+      margin-bottom: 0
+      padding-bottom: 0
+      padding-left: 20px
+  
+    @media screen and (max-width: $screen-phone-wide-min)
+      padding-left: 20px
+
+  legend
+    position: absolute
+    width: 70px
+    margin-left: -100px
+    margin-top: -10px
+    padding: 0 0 0 10px
+    background-color: transparent
+    display: block
+    border: 0
+    font-weight: bold
+    font-size: 14px !important
+    color: black
+
+    @media screen and (max-width: $screen-tablet-max)
+  
+    @media screen and (max-width: $screen-phone-max)
+      width: 100%
+      margin-left: 0
+      float: none
+      clear: both
+      margin-bottom: 30px
+      padding-bottom: 0
+      font-size: 12px !important
+  
+    @media screen and (max-width: $screen-phone-wide-min)
+      width: 100%
+      margin-left: 0
+      float: none
+      clear: both
+      margin-bottom: 30px
+      padding-bottom: 0
+      font-size: 11px !important
+
   .field
     clear: both
     margin-bottom: 20px
-    .field-inputs
-      padding-left: 100px
+    width: 300px
+
+    @media screen and (max-width: $screen-tablet-max)
+      width: 340px
+  
+    @media screen and (max-width: $screen-phone-max)
+      width: 310px
+      padding: 14px
+  
+    @media screen and (max-width: $screen-phone-wide-min)
+      width: 300px
+      padding: 10px
+
     input
-      font-size: 13px
-      padding: 6px 9px
-    .field-label
-      float: left
-      width: 90px
-      font-weight: bold
-      font-size: 14px
-      padding-top: 5px
-      padding-left: 10px
-      &.wide
-        width: 400px
+      border: 1px solid #a0a0a5
+      font-size: 16px
+      padding: 7px 5px
+      width: 100%
+
+    select
+      background: transparent
+      padding: 7px 5px
+      font-size: 16px
+      width: 100%
+
     &.field-donation-amount
+      width: 100%
+
       .options
-        margin-left: 100px
-        width: 400px
+        width: 64%
+        margin-right: 5%
+        @media screen and (max-width: $screen-tablet-max)
+      
+        @media screen and (max-width: $screen-phone-max)
+          width: 100%
+          margin-bottom: 60px
+
+        @media screen and (max-width: $screen-phone-wide-min)
+
       .option
         float: left
         margin-right: 5px
         margin-bottom: 5px
+
         input
           display: none
+
         label
           background: url("++theme++ip.theme.fundraising/img/donation-level-button.png") no-repeat
           width: 90px
@@ -184,75 +380,188 @@ form.donation-form
           text-align: right
           cursor: pointer
           line-height: 1em
+
           .currency
             display: none
-            float: left
-            font-weight: normal
+
         &.selected label
           background: url("++theme++ip.theme.fundraising/img/donation-level-button-selected.png") no-repeat
+
       .field-amount
         float: right
-        width: 155px
-        padding-top: 10px
+        width: 33%
+
+        @media screen and (max-width: $screen-tablet-max)
+      
+        @media screen and (max-width: $screen-phone-max)
+          width: 200px
+          clear: both
+          position: absolute
+          margin-top: 90px
+          margin-left: -28px
+    
+        @media screen and (max-width: $screen-phone-wide-min)
+          margin-top: 130px
+          margin-left: 0
+  
         label
           display: block
           text-align: center
           font-weight: normal
           font-size: 13px
+
           &.currency
             font-weight: bold
             font-size: 24px
             float: left
-            margin-right: 5px
+            width: 10%
+            margin-right: 5%
             padding-top: 11px
+
         input
-          font-size: 24px
+          background: url("++theme++ip.theme.fundraising/img/amount-field-background.png") repeat-x top left
+          color: #555555
+          font-size: 30px
           font-weight: bold
           padding: 2px 4px
           text-align: center
           margin-bottom: 5px
-    .required
-      display: block
+          width: 70%
+
+          @media screen and (max-width: $screen-tablet-max)
+        
+          @media screen and (max-width: $screen-phone-max)
+            font-size: 26px
+      
+          @media screen and (max-width: $screen-phone-wide-min)
+            font-size: 24px
+
+    &.field-is-honorary input
       float: left
-      height: 0
-      padding-top: 9px
-      overflow: hidden
-      width: 9px
-      margin-left: -7px
-      background: url("++theme++ip.theme.fundraising/img/required.png") no-repeat
-  .after-amount
-    display: none
+      width: auto
+      margin-top: 2px
+      margin-right: 10px
 
-#recurly-subscribe .recurly
-  font-family: Arial, FreeSans, sans-serif !important
+    .subfield
+      float: left
+      width: 45%
+      margin-right: 5%
+      padding-bottom: 20px
 
-  .field.quantity
-    display:none
-    
-  .recurring_cost
-    display: none
-    
-  .subscription
-    display: none
+      &.subfield-city, &.subfield-address, &.subfield-country
+        width: 95%
+        clear: both
 
-  .due_now
-    display: none
+      &.subfield-email-signup
+        width: 95%
+        clear: both
 
-  .vat
-    display: none
+        input
+          float: left
+          width: auto
+          margin-top: 2px
+          margin-right: 10px
 
-  .field.vat_number
-    display: none
+      &.subfield-state
+        padding-top: 7px
 
-  .inapplicable
-    display: none
+        input
+          display: none
 
-  .billing_info,
-  .contact_info
-    padding: 0
-    padding-left: 120px
+        &.international
 
-    .title
+          select
+            display: none
+
+          input
+            display: block
+
+      &.subfield-card-number
+        width: 75%
+
+      &.subfield-card-cvv
+        width: 15%
+
+        .field-help
+          text-align: right
+          width: 120px
+          margin-left: -50px
+
+      &.subfield-expiration-date
+        width: 95%
+        margin-top: -10px
+        padding-top: 0
+
+        label
+          display: block
+          clear: both
+
+        .subfield-expiration-month
+          width: 60%
+
+        .subfield-expiration-year
+          width: 35%
+          margin-right: 0
+
+      .field-help
+        color: #555555
+        font-size: 12px
+
+    .accepted-cards
+      position: absolute
+      margin-top: 47px
+
+    .required
+      display: none
+
+.ssl-cert-seal
+  float: right
+  margin-top: -434px
+  margin-right: 40px
+
+.panel-donation_form_recurly .ssl-cert-seal
+  margin-top: -455px
+
+.donation-form-error
+  border: 3px solid $red
+  padding: 15px 30px
+  margin: 30px
+  border-radius: 10px
+  -moz-border-radius: 10px
+
+  h5
+    color: $red
+    font-size: 18px
+
+  em
+    display: block
+    padding: 0 30px
+
+#recurly-subscribe
+
+  .recurly
+    width: 100%
+    font-family: Arial, FreeSans, sans-serif !important
+
+    select
+      background: transparent
+      padding: 7px 5px
+      font-size: 16px
+      width: 100%
+
+    .recurring_cost, .subscription, .due_now, .vat, .field.vat_number, .inapplicable
+      display: none
+
+    .billing_info, .contact_info
+      padding: 0
+      padding-left: 120px
+
+      @media screen and (max-width: $screen-phone-max)
+        clear: both
+        width: 100%
+        padding-left: 20px
+  
+    .billing_info .title, .contact_info .title
       position: absolute
       width: 80px
       margin-left: -110px
@@ -261,46 +570,78 @@ form.donation-form
       padding-left: 10px
       color: black
 
-    .field .title
-      position: relative
-      width: auto
-      margin-left: 0
-      padding-top: 0
-      padding-left: 0
-      padding-right: 15px
+      @media screen and (max-width: $screen-phone-max)
+        clear: both
+        width: 100%
+        padding-left: 20px
+        position: relative
+        width: auto
+        margin-left: 0
+        padding-top: 0
+        padding-left: 0
+        padding-right: 15px
 
-    .credit_card
+    .billing_info .credit_card, .contact_info .credit_card
       padding-top: 20px
-    
-    .accepted_cards
-      top: 50px
+
+    .billing_info .accepted_cards, .contact_info .accepted_cards
+      top: 70px
       margin-left: -107px
       right: auto
       width: 100px
-      
-  .billing_info
-    .title  
+
+    .billing_info .address2, .contact_info .address2
+      display: none
+
+    .billing_info .title
       padding-top: 20px
 
-#recurly-subscribe.after-amount
-  display: none
+    .expires
+      height: 80px
 
-#content
-  padding-left: 40px
-  width: 600px
-  h2.page-section-header
-    width: 590px
+      .title
+        position: static
+        clear: both
+        float: none
+        padding: 0
+        margin: 0 0 4px 0
 
-#column-right
-  padding-right: 10px
+      .month
+        width: 65%
+        margin-right: 5%
+        float: left
+      .year
+        width: 25%
+        float: left
+        margin-right: 0
 
-dl.portlet, .portlet
-  background: #eeeeee
-  padding-bottom: 5px
-  border: 1px solid #dddddd
-  margin-top: 40px
-  padding-top: 1px
-  font-size: 13px
+  &.after-amount
+    display: none
+
+  .error
+    /* supply height to ensure consistent positioning for every browser */
+    height: 15px
+    background-color: #FFFE36
+    border: 1px solid #E1E16D
+    font-size: 11px
+    color: #000
+    padding: 3px 10px
+    margin-left: -2px
+
+    /* CSS3 spicing for mozilla and webkit */
+    -moz-border-radius: 4px
+    -webkit-border-radius: 4px
+    -moz-border-radius-bottomleft: 0
+    -moz-border-radius-topleft: 0
+    -webkit-border-bottom-left-radius: 0
+    -webkit-border-top-left-radius: 0
+    -moz-box-shadow: 0 0 6px #ddd
+    -webkit-box-shadow: 0 0 6px #ddd
+
+dl.portlet .portletItem, .portlet .portletItem
+  padding: 15px
+  text-align: center
+  border-top: 1px solid white
 
 dl.portlet .portletHeader, .portlet .portletHeader
   background-color: transparent
@@ -310,26 +651,33 @@ dl.portlet .portletHeader, .portlet .portletHeader
   margin-top: -33px
   padding-left: 0
   padding-bottom: 4px
+aside dl.portlet .portletHeader, .portlet .portletHeader a,
+aside dl.portlet .portletHeader, .portlet .portletHeader a:hover
+  color: #555 !important
 
-dl.portlet .portletItem, .portlet .portletItem
-  padding: 15px
-  text-align: center
-  border-top: 1px solid white
-
-dl.portlet .portletItem .campaign-goal-text, .portlet .portletItem .campaign-goal-text, dl.portlet .portletItem .campaign-days-left-text, .portlet .portletItem .campaign-days-left-text
+dl.portlet .campaign-goal-text, .portlet .campaign-goal-text, dl.portlet .campaign-days-left-text, .portlet .campaign-days-left-text
   font-size: 14px
   display: block
 
-dl.portlet .portletItem .campaign-raised-text, .portlet .portletItem .campaign-raised-text
+  @media screen and (max-width: $screen-phone-max)
+    font-size: 10px
+  
+dl.portlet .campaign-raised-text, .portlet .campaign-raised-text
   font-size: 16px
 
-dl.portlet .portletItem .campaign-start-date, .portlet .portletItem .campaign-start-date
+  @media screen and (max-width: $screen-phone-max)
+    font-size: 11px
+  
+dl.portlet .campaign-start-date, .portlet .campaign-start-date
   display: none
 
 dl.portlet.portletCampaignMedia
+  margin-top: 10px
   padding: 0
   background-color: transparent
   border: 0
+
+  @media screen and (max-width: $screen-tablet-max)
 
   .portletHeader
     display: none
@@ -341,38 +689,20 @@ dl.portlet.portletCampaignMedia
 .progress-bar
   margin: 5px
   border: 1px solid #555555
-  height: 20px
+  height: 19px
+  overflow: hidden
+  background: #eeeeee url("++theme++ip.theme.fundraising/img/progress-bar-background.png") repeat-x left center
 
-ul.badges
-  background-color: #eeeeee
-  margin: 0
-  padding: 0
-  width: 100%
-  li
-    list-style: none
-    margin-left: 0
-    padding: 10px
-    float: left
-    width: 260px
-    margin-right: 10px
-    text-align: center
+  .progress
+    margin: 0
+    border: 0
+    height: 29px
+    padding: 0
+    background: #993300 url("++theme++ip.theme.fundraising/img/progress-bar-progress-background.png") no-repeat right top
 
-#column-right ul.badges
-  background-color: transparent
-  li
-    width: 105px
-
-.count
-  text-align: center
-  width: 99px
-  .value
-    display: block
-    padding-top: 5px
-    font-size: 24px
-    font-weight: bold
-    width: 99px
-    height: 40px
-    background: url("++theme++ip.theme.fundraising/img/count-background.png") no-repeat
+  div
+    &.text, &.progress .text
+      display: none
 
 dl.portlet.portletCampaignFundraisers
   a
@@ -387,35 +717,88 @@ dl.portlet.portletCampaignFundraisers
       color: black
       width: 70px
       text-align: right
+
   .count-text
     text-align: left
     display: block
     font-size: 12px
+
   a.button
     background: url("++theme++ip.theme.fundraising/img/button-start-fundraiser.png") no-repeat
     height: 0
     padding: 0
     padding-top: 40px
     width: 175px
+    margin: 34px auto 10px auto
     overflow: hidden
     border: 0
     border-radius: 0
     -moz-border-radius: 0
-    margin-left: 34px
-    margin-top: 10px
+
 
 .portletCampaignStatus .count
-  margin-left: 70px
 
-.portletFooter
-  display: none
+.donor-quote
+  text-align: left
+  font-size: 12px
 
-p.description
-  margin-top: 10px
+  img
+    float: left
+    display: block
+    margin: 0 15px 15px 0
+    max-width: 32px
+    min-width: 32px
+  p
+    margin-bottom: 0 !important
+    padding-left: 50px
+
+  .donor-name
+    font-weight: bold
+    padding-left: 50px
+    padding-top: 3px
+
+.recurly .footer,
+.form-buttons
+  margin-left: 110px
+  padding-bottom: 20px
+
+.donation-form-wrapper .recurly button,
+.form-buttons input,
+a.button
+  background: url("++theme++ip.theme.fundraising/img/button.png") no-repeat
+  color: white
+  text-align: center
   font-size: 16px
-  color: #555555
-  margin-bottom: 10px
+  font-weight: bold
+  padding: 6px 10px 
+  height: 40px
+  width: 175px
+  overflow: hidden
+  border: 0
+  border-radius: 0
+  -moz-border-radius: 0
+  cursor: pointer
+  box-shadow: none
+  
+  &:hover
+    color: white !important
 
-.image-left
-  float: left
-  margin: 0 15px 15px 0
+#edit-bar
+  background-color: $red
+  border: .25em solid $red
+  border-bottom: 0
+
+  #content-views
+    background-color: $red !important
+
+  #contentActionMenus
+    background-color: $red !important
+
+    dl.actionMenu a, 
+    dl.actionMenu.activated dd
+      background-color: $red !important
+
+    dl.actionMenu.activated dd
+      border-bottom: .5em solid $red !important
+    
+        

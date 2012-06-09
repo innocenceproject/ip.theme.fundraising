@@ -2,7 +2,9 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:five="http://namespaces.zope.org/five"
     xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:grok="http://namespaces.zope.org/grok"
     i18n_domain="ip.theme.fundraising">
 
   <five:registerPackage package="." initialize=".initialize" />
@@ -11,5 +13,18 @@
     directory="static"
     type="theme"
     name="ip.theme.fundraising" />
+
+  <!-- Register an extension profile to make the product installable
+       in Plone -->
+  <genericsetup:registerProfile
+      name="default"
+      title="Innocence Project Fundraising Theme"
+      directory="profiles/default"
+      description="Extension profile for ip.theme.fundraising"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <!-- Grok the package to initialise schema interfaces and content classes -->
+  <grok:grok package="." />
 
 </configure>
