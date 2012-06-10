@@ -190,7 +190,7 @@ article .portlet {
     display: none; }
 
 .next-steps h2 {
-  margin: 20px 0 0 0; }
+  margin: 0; }
 
 .donation-receipt-wrapper {
   padding: 30px; }
@@ -241,208 +241,278 @@ article .portlet {
   .donation-form-wrapper .after-amount {
     display: none; }
 
-form.donation-form fieldset {
-  margin: 0;
-  padding: 20px 20px 20px 110px;
-  border: 0 !important;
-  background: url("++resource++collective.salesforce.fundraising.static/recurly-theme/images/dash.png") repeat-x left top; }
-  form.donation-form fieldset.fieldset-donation-amount {
-    padding-bottom: 0;
-    background-image: none; }
-  @media screen and (max-width: 991px) {
-    form.donation-form fieldset {
-      padding-left: 120px; } }
-  @media screen and (max-width: 767px) {
-    form.donation-form fieldset {
-      clear: both;
-      margin-bottom: 0;
+form.donation-form {
+  background-color: #eeeeee; }
+  form.donation-form fieldset {
+    margin: 0;
+    padding: 20px 20px 0 110px;
+    border: 0 !important;
+    background: url("++resource++collective.salesforce.fundraising.static/recurly-theme/images/dash.png") repeat-x left top; }
+    form.donation-form fieldset.fieldset-donation-amount {
       padding-bottom: 0;
-      padding-left: 20px; } }
-  @media screen and (max-width: 480px) {
-    form.donation-form fieldset {
-      padding-left: 20px; } }
-form.donation-form legend {
-  position: absolute;
-  width: 70px;
-  margin-left: -100px;
-  margin-top: -10px;
-  padding: 0 0 0 10px;
-  background-color: transparent;
-  display: block;
-  border: 0;
-  font-weight: bold;
-  font-size: 14px !important;
-  color: black; }
-  @media screen and (max-width: 767px) {
-    form.donation-form legend {
-      width: 100%;
-      margin-left: 0;
-      float: none;
-      clear: both;
-      margin-bottom: 30px;
-      padding-bottom: 0;
-      font-size: 12px !important; } }
-  @media screen and (max-width: 480px) {
-    form.donation-form legend {
-      width: 100%;
-      margin-left: 0;
-      float: none;
-      clear: both;
-      margin-bottom: 30px;
-      padding-bottom: 0;
-      font-size: 11px !important; } }
-form.donation-form .field {
-  clear: both;
-  margin-bottom: 20px;
-  width: 300px; }
-  @media screen and (max-width: 991px) {
-    form.donation-form .field {
-      width: 340px; } }
-  @media screen and (max-width: 767px) {
-    form.donation-form .field {
-      width: 310px;
-      padding: 14px; } }
-  @media screen and (max-width: 480px) {
-    form.donation-form .field {
-      width: 300px;
-      padding: 10px; } }
-  form.donation-form .field input {
-    border: 1px solid #a0a0a5;
-    font-size: 16px;
-    padding: 7px 5px;
-    width: 100%; }
-  form.donation-form .field select {
-    background: transparent;
-    padding: 7px 5px;
-    font-size: 16px;
-    width: 100%; }
-  form.donation-form .field.field-donation-amount {
-    width: 100%; }
-    form.donation-form .field.field-donation-amount .options {
-      width: 64%;
-      margin-right: 5%; }
-      @media screen and (max-width: 767px) {
-        form.donation-form .field.field-donation-amount .options {
-          width: 100%;
-          margin-bottom: 60px; } }
-    form.donation-form .field.field-donation-amount .option {
-      float: left;
-      margin-right: 5px;
-      margin-bottom: 5px; }
-      form.donation-form .field.field-donation-amount .option input {
-        display: none; }
-      form.donation-form .field.field-donation-amount .option label {
-        background: url("++theme++ip.theme.fundraising/img/donation-level-button.png") no-repeat;
-        width: 90px;
-        height: 30px;
-        padding: 6px 8px 0 0;
-        display: block;
-        font-size: 21px;
-        font-weight: normal;
-        text-align: right;
-        cursor: pointer;
-        line-height: 1em; }
-        form.donation-form .field.field-donation-amount .option label .currency {
-          display: none; }
-      form.donation-form .field.field-donation-amount .option.selected label {
-        background: url("++theme++ip.theme.fundraising/img/donation-level-button-selected.png") no-repeat; }
-    form.donation-form .field.field-donation-amount .field-amount {
-      float: right;
-      width: 33%; }
-      @media screen and (max-width: 767px) {
-        form.donation-form .field.field-donation-amount .field-amount {
-          width: 200px;
-          clear: both;
-          position: absolute;
-          margin-top: 90px;
-          margin-left: -28px; } }
-      @media screen and (max-width: 480px) {
-        form.donation-form .field.field-donation-amount .field-amount {
-          margin-top: 130px;
-          margin-left: 0; } }
-      form.donation-form .field.field-donation-amount .field-amount label {
-        display: block;
-        text-align: center;
-        font-weight: normal;
-        font-size: 13px; }
-        form.donation-form .field.field-donation-amount .field-amount label.currency {
-          font-weight: bold;
-          font-size: 24px;
-          float: left;
-          width: 10%;
-          margin-right: 5%;
-          padding-top: 11px; }
-      form.donation-form .field.field-donation-amount .field-amount input {
-        background: url("++theme++ip.theme.fundraising/img/amount-field-background.png") repeat-x top left;
-        color: #555555;
-        font-size: 30px;
-        font-weight: bold;
-        padding: 2px 4px;
-        text-align: center;
-        margin-bottom: 5px;
-        width: 70%; }
+      background-image: none; }
+    @media screen and (max-width: 991px) {
+      form.donation-form fieldset {
+        padding-left: 120px; } }
+    @media screen and (max-width: 767px) {
+      form.donation-form fieldset {
+        clear: both;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        padding-left: 20px; } }
+    @media screen and (max-width: 480px) {
+      form.donation-form fieldset {
+        padding-left: 20px; } }
+  form.donation-form legend {
+    position: absolute;
+    width: 70px;
+    margin-left: -100px;
+    margin-top: -10px;
+    padding: 0 0 0 10px;
+    background-color: transparent;
+    display: block;
+    border: 0;
+    font-weight: bold;
+    font-size: 14px !important;
+    color: black; }
+    @media screen and (max-width: 767px) {
+      form.donation-form legend {
+        width: 100%;
+        margin-left: 0;
+        float: none;
+        clear: both;
+        margin-bottom: 30px;
+        padding-bottom: 0;
+        font-size: 12px !important; } }
+    @media screen and (max-width: 480px) {
+      form.donation-form legend {
+        width: 100%;
+        margin-left: 0;
+        float: none;
+        clear: both;
+        margin-bottom: 30px;
+        padding-bottom: 0;
+        font-size: 11px !important; } }
+  form.donation-form .field {
+    clear: both;
+    margin-bottom: 20px;
+    width: 300px; }
+    @media screen and (max-width: 991px) {
+      form.donation-form .field {
+        width: 340px; } }
+    @media screen and (max-width: 767px) {
+      form.donation-form .field {
+        width: 310px;
+        padding: 14px; } }
+    @media screen and (max-width: 480px) {
+      form.donation-form .field {
+        width: 300px;
+        padding: 10px; } }
+    form.donation-form .field input {
+      border: 1px solid #a0a0a5;
+      font-size: 16px;
+      padding: 7px 5px;
+      width: 100%; }
+    form.donation-form .field select {
+      background: transparent;
+      padding: 7px 5px;
+      font-size: 16px;
+      width: 100%; }
+    form.donation-form .field textarea {
+      height: 120px;
+      border: 1px solid #a0a0a5;
+      font-size: 16px;
+      padding: 7px 5px;
+      width: 100%; }
+    form.donation-form .field.field-donation-amount {
+      width: 100%; }
+      form.donation-form .field.field-donation-amount .options {
+        width: 64%;
+        margin-right: 5%; }
         @media screen and (max-width: 767px) {
-          form.donation-form .field.field-donation-amount .field-amount input {
-            font-size: 26px; } }
+          form.donation-form .field.field-donation-amount .options {
+            width: 100%;
+            margin-bottom: 60px; } }
+      form.donation-form .field.field-donation-amount .option {
+        float: left;
+        margin-right: 5px;
+        margin-bottom: 5px; }
+        form.donation-form .field.field-donation-amount .option input {
+          display: none; }
+        form.donation-form .field.field-donation-amount .option label {
+          background: url("++theme++ip.theme.fundraising/img/donation-level-button.png") no-repeat;
+          width: 90px;
+          height: 30px;
+          padding: 6px 8px 0 0;
+          display: block;
+          font-size: 21px;
+          font-weight: normal;
+          text-align: right;
+          cursor: pointer;
+          line-height: 1em; }
+          form.donation-form .field.field-donation-amount .option label .currency {
+            display: none; }
+        form.donation-form .field.field-donation-amount .option.selected label {
+          background: url("++theme++ip.theme.fundraising/img/donation-level-button-selected.png") no-repeat; }
+      form.donation-form .field.field-donation-amount .field-amount {
+        float: right;
+        width: 33%; }
+        @media screen and (max-width: 767px) {
+          form.donation-form .field.field-donation-amount .field-amount {
+            width: 200px;
+            clear: both;
+            position: absolute;
+            margin-top: 90px;
+            margin-left: -28px; } }
         @media screen and (max-width: 480px) {
-          form.donation-form .field.field-donation-amount .field-amount input {
-            font-size: 24px; } }
-  form.donation-form .field.field-is-honorary input {
-    float: left;
-    width: auto;
-    margin-top: 2px;
-    margin-right: 10px; }
-  form.donation-form .field .subfield {
-    float: left;
-    width: 45%;
-    margin-right: 5%;
-    padding-bottom: 20px; }
-    form.donation-form .field .subfield.subfield-city, form.donation-form .field .subfield.subfield-address, form.donation-form .field .subfield.subfield-country {
-      width: 95%;
-      clear: both; }
-    form.donation-form .field .subfield.subfield-email-signup {
-      width: 95%;
-      clear: both; }
-      form.donation-form .field .subfield.subfield-email-signup input {
+          form.donation-form .field.field-donation-amount .field-amount {
+            margin-top: 130px;
+            margin-left: 0; } }
+        form.donation-form .field.field-donation-amount .field-amount label {
+          display: block;
+          text-align: center;
+          font-weight: normal;
+          font-size: 13px; }
+          form.donation-form .field.field-donation-amount .field-amount label.currency {
+            font-weight: bold;
+            font-size: 24px;
+            float: left;
+            width: 10%;
+            margin-right: 5%;
+            padding-top: 11px; }
+        form.donation-form .field.field-donation-amount .field-amount input {
+          background: url("++theme++ip.theme.fundraising/img/amount-field-background.png") repeat-x top left;
+          color: #555555;
+          font-size: 30px;
+          font-weight: bold;
+          padding: 2px 4px;
+          text-align: center;
+          margin-bottom: 5px;
+          width: 70%; }
+          @media screen and (max-width: 767px) {
+            form.donation-form .field.field-donation-amount .field-amount input {
+              font-size: 26px; } }
+          @media screen and (max-width: 480px) {
+            form.donation-form .field.field-donation-amount .field-amount input {
+              font-size: 24px; } }
+    form.donation-form .field.field-is-honorary {
+      width: 100%; }
+      form.donation-form .field.field-is-honorary input {
         float: left;
         width: auto;
         margin-top: 2px;
         margin-right: 10px; }
-    form.donation-form .field .subfield.subfield-state {
-      padding-top: 7px; }
-      form.donation-form .field .subfield.subfield-state input {
-        display: none; }
-      form.donation-form .field .subfield.subfield-state.international select {
-        display: none; }
-      form.donation-form .field .subfield.subfield-state.international input {
-        display: block; }
-    form.donation-form .field .subfield.subfield-card-number {
-      width: 75%; }
-    form.donation-form .field .subfield.subfield-card-cvv {
-      width: 15%; }
-      form.donation-form .field .subfield.subfield-card-cvv .field-help {
-        text-align: right;
-        width: 120px;
-        margin-left: -50px; }
-    form.donation-form .field .subfield.subfield-expiration-date {
-      width: 95%;
-      margin-top: -10px;
-      padding-top: 0; }
-      form.donation-form .field .subfield.subfield-expiration-date label {
-        display: block;
+      form.donation-form .field.field-is-honorary .field-help {
+        font-size: 11px; }
+    form.donation-form .field .subfield {
+      float: left;
+      width: 45%;
+      margin-right: 5%;
+      padding-bottom: 20px; }
+      form.donation-form .field .subfield.subfield-city, form.donation-form .field .subfield.subfield-address, form.donation-form .field .subfield.subfield-country {
+        width: 95%;
         clear: both; }
-      form.donation-form .field .subfield.subfield-expiration-date .subfield-expiration-month {
-        width: 60%; }
-      form.donation-form .field .subfield.subfield-expiration-date .subfield-expiration-year {
-        width: 35%;
-        margin-right: 0; }
-    form.donation-form .field .subfield .field-help {
-      color: #555555;
-      font-size: 12px; }
-  form.donation-form .field .accepted-cards {
-    position: absolute;
-    margin-top: 47px; }
-  form.donation-form .field .required {
+      form.donation-form .field .subfield.subfield-email-signup {
+        width: 95%;
+        clear: both; }
+        form.donation-form .field .subfield.subfield-email-signup input {
+          float: left;
+          width: auto;
+          margin-top: 2px;
+          margin-right: 10px; }
+      form.donation-form .field .subfield.subfield-state {
+        padding-top: 7px; }
+        form.donation-form .field .subfield.subfield-state input {
+          display: none; }
+        form.donation-form .field .subfield.subfield-state.international select {
+          display: none; }
+        form.donation-form .field .subfield.subfield-state.international input {
+          display: block; }
+      form.donation-form .field .subfield.subfield-card-number {
+        width: 75%; }
+      form.donation-form .field .subfield.subfield-card-cvv {
+        width: 15%; }
+        form.donation-form .field .subfield.subfield-card-cvv .field-help {
+          text-align: right;
+          width: 120px;
+          margin-left: -50px; }
+      form.donation-form .field .subfield.subfield-expiration-date {
+        width: 95%;
+        margin-top: -10px;
+        padding-top: 0; }
+        form.donation-form .field .subfield.subfield-expiration-date label {
+          display: block;
+          clear: both; }
+        form.donation-form .field .subfield.subfield-expiration-date .subfield-expiration-month {
+          width: 60%; }
+        form.donation-form .field .subfield.subfield-expiration-date .subfield-expiration-year {
+          width: 35%;
+          margin-right: 0; }
+      form.donation-form .field .subfield .field-help {
+        color: #555555;
+        font-size: 12px; }
+    form.donation-form .field .accepted-cards {
+      position: absolute;
+      margin-top: 47px; }
+    form.donation-form .field .required {
+      display: none; }
+  form.donation-form.donation-form-honorary label {
+    font-size: 14px;
+    font-weight: normal; }
+  form.donation-form.donation-form-honorary fieldset.fieldset-email-notification {
+    display: none; }
+  form.donation-form.donation-form-honorary fieldset.fieldset-email-preview {
+    display: none;
+    padding-left: 30px; }
+    form.donation-form.donation-form-honorary fieldset.fieldset-email-preview legend {
+      text-align: center;
+      width: 100%;
+      padding: 40px 0 0 0 !important;
+      float: none;
+      clear: both;
+      margin: 0;
+      position: static; }
+    form.donation-form.donation-form-honorary fieldset.fieldset-email-preview .field {
+      width: 100%;
+      padding: 0;
+      margin: 0; }
+  form.donation-form.donation-form-honorary .field {
+    padding-bottom: 10px;
+    display: none; }
+    form.donation-form.donation-form-honorary .field.field-honorary-type {
+      display: block; }
+    form.donation-form.donation-form-honorary .field.field-honorary-recipient {
+      padding-bottom: 0;
+      margin-bottom: 0; }
+    form.donation-form.donation-form-honorary .field.field-honorary-recipient {
+      margin-bottom: 0;
+      padding-bottom: 0; }
+    form.donation-form.donation-form-honorary .field .subfield {
+      width: 100%;
+      float: none; }
+      form.donation-form.donation-form-honorary .field .subfield.subfield-show-amount .options {
+        padding: 0;
+        margin-bottom: 0; }
+        form.donation-form.donation-form-honorary .field .subfield.subfield-show-amount .options .option {
+          float: none; }
+  form.donation-form.donation-form-honorary .form-buttons {
+    display: none; }
+  form.donation-form.donation-form-honorary .options {
+    margin: 10px 0;
+    padding: 0 15px;
+    margin-bottom: 30px;
+    clear: both; }
+  form.donation-form.donation-form-honorary .option {
+    float: left;
+    padding-right: 30px; }
+    form.donation-form.donation-form-honorary .option input {
+      display: inline;
+      width: auto;
+      margin-right: 7px; }
+    form.donation-form.donation-form-honorary .option label {
+      display: inline;
+      font-weight: bold; }
+  form.donation-form.donation-form-honorary .fieldset-email-preview .preview-links {
     display: none; }
 
 .ssl-cert-seal {
@@ -662,25 +732,37 @@ dl.portlet.portletCampaignFundraisers a.button {
 
 .donation-form-wrapper .recurly button,
 .form-buttons input,
-a.button {
+a.button,
+a.button:visited,
+a.button:hover {
   background: url("++theme++ip.theme.fundraising/img/button.png") no-repeat;
-  color: white;
+  color: white !important;
+  display: block;
   text-align: center;
   font-size: 16px;
   font-weight: bold;
-  padding: 6px 10px;
-  height: 40px;
-  width: 175px;
+  padding: 9px 10px;
+  height: 22px;
+  width: 155px;
   overflow: hidden;
   border: 0;
   border-radius: 0;
+  border: 0 !important;
   -moz-border-radius: 0;
   cursor: pointer;
   box-shadow: none; }
   .donation-form-wrapper .recurly button:hover,
   .form-buttons input:hover,
-  a.button:hover {
+  a.button:hover,
+  a.button:visited:hover,
+  a.button:hover:hover {
     color: white !important; }
+
+.donation-form-wrapper .recurly button,
+.form-buttons input {
+  padding: 0 10px;
+  width: 175px;
+  height: 40px; }
 
 #edit-bar {
   background-color: #993300;

@@ -33,7 +33,7 @@
     <append css:theme="#page-content" css:content="#viewlet-below-content" />
     <replace css:theme-children="#column-right" css:content-children="#portal-column-two" />
 
-    <prepend css:theme="body" css:content=".portalMessage" />-->
+    <prepend css:theme="#content" css:content=".portalMessage" />-->
     <!--<prepend css:theme="body" css:content="#portal-personaltools" />-->
 
     <!-- Edit Bar -->

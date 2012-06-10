@@ -81,6 +81,9 @@ function setupRecurlyForm() {
 
     card_cvv.before(accepted_cards);
     names.wrapAll('<div class="field compound name"></div>');
+
+    var button_submit = recurly_form.find('button.submit');
+    button_submit.text('Submit').after('<div class="discreet">Your card will be automatically charged every month</div>');
 }
 
 function setupAuthnetDpmForm() {
@@ -98,6 +101,112 @@ function setupAuthnetDpmForm() {
     exp_year.change(function () {
         exp_full.val(exp_month.va() + exp_year.va());
     })
+
+    var first_name = form.find("input[name='x_first_name']").change(populateAuthnetDescription);
+    var last_name = form.find("input[name='x_last_name']").change(populateAuthnetDescription);
+    var amount = form.find("input[name='x_amount']").change(populateAuthnetDescription);
+    var description = form.find("input[name='x_description']").change(populateAuthnetDescription);
+}
+
+function handleHonoraryTypeChange() {
+    var form = $(this).parents('form.donation-form-honorary');
+    if ($(this).attr('checked') == true) {
+        var honorary_name = form.find('.field-honorary-name')
+        var honorary_name_label = honorary_name.find('label')
+        if ($(this).val() == 'Memorial') {
+            honorary_name_label.text(honorary_name_label.text().replace('honor','memory'));
+        }
+        if ($(this).val() == 'Honorary') {
+            honorary_name_label.text(honorary_name_label.text().replace('memory','honor'));
+        }
+        honorary_name.slideDown();
+        form.find('.field-honorary-send, .fieldset-email-notification').slideDown();
+        
+        form.find('.form-buttons').slideDown();
+    }
+    refreshHonoraryEmailPreview(form);
+}
+
+function handleHonorarySendChange() {
+    var form = $(this).parents('form.donation-form-honorary');
+    if ($(this).attr('checked') == true) {
+        var honorary_recipient = form.find('.field-honorary-recipient');
+        var honorary_message = form.find('.field-honorary-message');
+        var email_preview = form.find('.fieldset-email-preview');
+        if ($(this).val() == 'Yes') {
+            honorary_recipient.slideDown();
+            email_preview.slideDown();
+            honorary_recipient.find('input').attr('required', 'required');
+            honorary_message.slideDown()
+        } else {
+            honorary_recipient.slideUp();
+            email_preview.slideUp();
+            honorary_message.slideUp()
+            honorary_recipient.find('input').attr('required', '');
+        }
+    }
+    refreshHonoraryEmailPreview(form);
+}
+
+function handleHonoraryShowAmountChange() {
+    var form = $(this).parents('form.donation-form-honorary');
+    refreshHonoraryEmailPreview(form);
+}
+
+function refreshHonoraryEmailPreview(form) {
+    var preview_fieldset = form.find('.fieldset-email-preview');
+    var honorary_send = form.find('input[name="honorary_send"]:checked').val();
+
+    if (honorary_send != 'Yes') {
+        preview_fieldset.slideUp();
+        return;
+    }
+
+    var honorary_type = form.find('input[name="honorary_type"]:checked').val();
+    var show_amount = form.find('input[name="show_amount"]:checked').val();
+
+    var preview_href = '';
+    if (honorary_type == 'Honorary') {
+        if (show_amount == 'Yes') {
+            preview_href = preview_fieldset.find('.preview-links a.honorary-preview-with-amount').attr('href');
+        } else {
+            preview_href = preview_fieldset.find('.preview-links a.honorary-preview-without-amount').attr('href');
+        }
+    }
+
+    if (honorary_type == 'Memorial') {
+        if (show_amount == 'Yes') {
+            preview_href = preview_fieldset.find('.preview-links a.memorial-preview-with-amount').attr('href');
+        } else {
+            preview_href = preview_fieldset.find('.preview-links a.memorial-preview-without-amount').attr('href');
+        }
+    }
+
+    preview_fieldset.find('.field-email-preview').load(preview_href, function () {$(this).slideDown()});
+}
+
+function setupHonoraryForm() {
+    var form = $('form.donation-form-honorary');
+
+    if (form.length == 0) {
+        return;
+    }
+
+    // Handle changes in the type
+    var type_input = form.find('.field-honorary-type .option input');
+    type_input.change(handleHonoraryTypeChange);
+    type_input.change();
+
+    // Handle changes in send
+    var send_input = form.find('.field-honorary-send .option input');
+    send_input.change(handleHonorarySendChange);
+    send_input.change();
+    
+    // Handle changes in show_amount
+    var send_input = form.find('.subfield-show-amount .option input');
+    send_input.change(handleHonoraryShowAmountChange);
+    send_input.change();
+    
 }
 
 function populateAuthnetDescription() {
@@ -134,10 +243,6 @@ $(document).ready(function () {
     // Construct Authorize.net transaction description as inputs change
     var authnet_dpm_form = ($('.donation-form-authnet-dpm').length);
     if (authnet_dpm_form.length) {
-        var first_name = authnet_dpm_form.find("input[name='x_first_name']").change(populateAuthnetDescription);
-        var last_name = authnet_dpm_form.find("input[name='x_last_name']").change(populateAuthnetDescription);
-        var amount = authnet_dpm_form.find("input[name='x_amount']").change(populateAuthnetDescription);
-        var description = authnet_dpm_form.find("input[name='x_description']").change(populateAuthnetDescription);
     }
 
     $('form.donation-form').each(function () {
@@ -155,4 +260,5 @@ $(document).ready(function () {
     //$("form").validationEngine('attach');
 
     setupAuthnetDpmForm();
+    setupHonoraryForm();
 });

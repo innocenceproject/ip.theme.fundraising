@@ -202,7 +202,7 @@ article
 
 .next-steps
   h2
-    margin: 20px 0 0 0
+    margin: 0
 
 
 .donation-receipt-wrapper
@@ -263,10 +263,11 @@ article
 
 
 form.donation-form
+  background-color: #eee
 
   fieldset
     margin: 0
-    padding: 20px 20px 20px 110px
+    padding: 20px 20px 0 110px
     border: 0 !important
     background: url("++resource++collective.salesforce.fundraising.static/recurly-theme/images/dash.png") repeat-x left top
 
@@ -345,6 +346,13 @@ form.donation-form
       background: transparent
       padding: 7px 5px
       font-size: 16px
+      width: 100%
+
+    textarea
+      height: 120px
+      border: 1px solid #a0a0a5
+      font-size: 16px
+      padding: 7px 5px
       width: 100%
 
     &.field-donation-amount
@@ -436,11 +444,17 @@ form.donation-form
           @media screen and (max-width: $screen-phone-wide-min)
             font-size: 24px
 
-    &.field-is-honorary input
-      float: left
-      width: auto
-      margin-top: 2px
-      margin-right: 10px
+    &.field-is-honorary
+      width: 100%
+      
+      input
+        float: left
+        width: auto
+        margin-top: 2px
+        margin-right: 10px
+
+      .field-help
+        font-size: 11px
 
     .subfield
       float: left
@@ -513,6 +527,85 @@ form.donation-form
 
     .required
       display: none
+
+  &.donation-form-honorary
+    label
+      font-size: 14px
+      font-weight: normal
+    
+    fieldset.fieldset-email-notification
+      display: none
+
+    fieldset.fieldset-email-preview
+      display: none
+      padding-left: 30px
+
+      legend
+        text-align: center
+        width: 100%
+        padding: 40px 0 0 0 !important
+        float: none
+        clear: both
+        margin: 0
+        position: static
+
+      .field
+        width: 100%
+        padding: 0
+        margin: 0
+
+    .field
+      padding-bottom: 10px
+      display: none
+      
+      &.field-honorary-type
+        display: block
+
+      &.field-honorary-recipient
+        padding-bottom: 0
+        margin-bottom: 0
+
+      &.field-honorary-recipient
+        margin-bottom: 0
+        padding-bottom: 0
+
+      .subfield
+        width: 100%
+        float: none
+
+        &.subfield-show-amount
+          .options
+            padding: 0
+            margin-bottom: 0
+
+            .option
+              float: none
+
+    .form-buttons
+      display: none
+
+    .options
+      margin: 10px 0
+      padding: 0 15px
+      margin-bottom: 30px
+      clear: both
+
+    .option
+      float: left
+      padding-right: 30px
+
+      input
+        display: inline
+        width: auto
+        margin-right: 7px
+
+      label
+        display: inline
+        font-weight: bold
+
+    .fieldset-email-preview
+      .preview-links
+        display: none
 
 .ssl-cert-seal
   float: right
@@ -764,24 +857,34 @@ dl.portlet.portletCampaignFundraisers
 
 .donation-form-wrapper .recurly button,
 .form-buttons input,
-a.button
+a.button,
+a.button:visited,
+a.button:hover
   background: url("++theme++ip.theme.fundraising/img/button.png") no-repeat
-  color: white
+  color: white !important
+  display: block
   text-align: center
   font-size: 16px
   font-weight: bold
-  padding: 6px 10px 
-  height: 40px
-  width: 175px
+  padding: 9px 10px 
+  height: 22px
+  width: 155px
   overflow: hidden
   border: 0
   border-radius: 0
+  border: 0 !important
   -moz-border-radius: 0
   cursor: pointer
   box-shadow: none
   
   &:hover
     color: white !important
+
+.donation-form-wrapper .recurly button,
+.form-buttons input
+  padding: 0 10px
+  width: 175px
+  height: 40px
 
 #edit-bar
   background-color: $red
