@@ -22,23 +22,38 @@
     <!-- Body -->
     <merge attributes="class" css:theme="body" css:content="body" />
 
+    <!-- Switch between the big and small header setup.  Big setup embeds Description while small just shows title -->
     <replace css:theme-children="article header.article-header h1" css:content-children="h1.documentFirstHeading" />
-    <replace css:theme-children="article header.article-header p" css:content-children=".documentDescription" />
-    <replace css:theme-children="article section.section-donation-form" css:content=".donation-form-wrapper" />
-    <replace css:theme-children="article aside#sidebar" css:content-children="#portal-column-two" />
+    <replace css:theme-children="article header.article-header-big h1" css:content-children="h1.documentFirstHeading" css:if-content="" />
+    <replace css:theme-children="article div.documentDescription" css:content-children=".documentDescription" css:if-not-content="body.template-view.portaltype-collective-salesforce-fundraising" />
+    <replace css:theme-children="article header.article-header-big p" css:content-children=".documentDescription" css:if-content="body.template-view.portaltype-collective-salesforce-fundraising" />
+    <drop css:theme=".documentDescription" css:if-not-content=".documentDescription" />
+    <drop css:theme="article header.article-header-big" css:if-not-content="body.template-view.portaltype-collective-salesforce-fundraising" />
+    <drop css:theme="article header.article-header" css:if-content="body.template-view.portaltype-collective-salesforce-fundraising" />
+    <drop css:theme="article div.documentDescription" css:if-content="body.template-view.portaltype-collective-salesforce-fundraising" />
 
-    <replace css:if-content="#content-core" css:theme-children="#content" css:content="#content-core" />
-    <replace if-content="not(//*[@id='content-core'])" css:theme-children="#content" css:content-children="#content" />
-    <replace css:theme-children="#content" css:content-children="#content-core" />
+    <!-- Populate right column with portlets or Thank You page actions -->
+    <replace css:theme-children="article section.section-donation-form" css:content=".donation-form-wrapper" />
+    <replace css:theme-children="article aside#sidebar" css:content="#portal-column-two .portlet" css:if-not-content="body.template-thank-you .next-steps" />
+    <replace css:theme-children="article aside#sidebar" css:content-children=".next-steps" css:if-content="body.template-thank-you .next-steps" />
+
+    <!-- Populate content core with the Thank You page's message and receipt, or use #content-core if it exists, if not fall back to #content -->
+    <replace css:theme-children="#content" css:content=".thank-you-message, .donation-receipt-wrapper" css:if-content="body.template-thank-you" />
+    <replace css:theme-children="#content" css:content="#content-core" css:if-content="#content-core" />
+    <replace css:theme-children="#content" css:content-children="#content" />
+
+    <prepend css:theme="#page-content" css:content="#viewlet-above-content" />
     <append css:theme="#page-content" css:content="#viewlet-below-content" />
-    <replace css:theme-children="#column-right" css:content-children="#portal-column-two" />
 
     <prepend css:theme="#content" css:content=".portalMessage" />-->
     <!--<prepend css:theme="body" css:content="#portal-personaltools" />-->
 
     <!-- Edit Bar -->
     <replace css:theme-children="#edit-bar" css:content-children="#edit-bar" />
+<!--
     <drop css:theme="#edit-bar" if-content="not(//*[@id='edit-bar'])" />
+    <drop css:theme="#edit-bar" css:if-theme="#personal-campaign-page-wrapper" />
+-->
 
     <replace css:theme-children="#page-column-right" css:content="#portal-column-two" />
 
