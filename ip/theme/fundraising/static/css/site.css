@@ -264,20 +264,16 @@ article .portlet {
 
 .donation-receipt-wrapper {
   padding: 30px 0; }
-
-  .donation-receipt-wrapper table.donation-lineitems{
-      width: 100%;
-  }
+  .donation-receipt-wrapper table.donation-lineitems {
+    width: 100%; }
     .donation-receipt-wrapper table.donation-lineitems caption {
-        font-weight: bold;
-        text-align: left;
-        border-bottom: 1px solid black;
-    }
+      font-weight: bold;
+      text-align: left;
+      border-bottom: 1px solid black; }
     .donation-receipt-wrapper table.donation-lineitems th {
-        font-weight: bold;
-        text-align: left;
-        font-size: 90%;
-    }
+      font-weight: bold;
+      text-align: left;
+      font-size: 90%; }
 
 .h5-active.ui-state-error {
   background-color: #993300; }
@@ -1140,3 +1136,6 @@ dl.portlet.portletTestimonial {
 .portletJanrainLoginRegister .field {
   float: left;
   width: 160px; }
+
+a:link, a:visited {
+  color: inherit; }
