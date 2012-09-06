@@ -8,6 +8,13 @@
     i18n_domain="ip.theme.fundraising">
 
   <five:registerPackage package="." initialize=".initialize" />
+  
+  <include package="z3c.jbot" file="meta.zcml" />
+  
+  <browser:jbot
+    directory="template_overrides"
+    layer=".interfaces.IInnocenceProjectFundraisingTheme"
+    />
 
   <plone:static
     directory="static"
