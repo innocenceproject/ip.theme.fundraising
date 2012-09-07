@@ -32,6 +32,9 @@
     <drop css:theme="article header.article-header" css:if-content="body.template-view.portaltype-collective-salesforce-fundraising" />
     <drop css:theme="article div.documentDescription" css:if-content="body.template-view.portaltype-collective-salesforce-fundraising" />
 
+    <!-- Remove duplicate headings -->
+    <drop css:content="h1.documentFirstHeading" />
+
     <!-- Populate right column with portlets or Thank You page actions -->
     <replace css:theme-children="article section.section-donation-form" css:content=".donation-form-wrapper" />
     <replace css:theme-children="article aside#sidebar" css:content="#portal-column-two .portlet" css:if-not-content="body.template-thank-you .next-steps" />
