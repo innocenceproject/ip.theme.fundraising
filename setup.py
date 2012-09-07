@@ -27,6 +27,7 @@ setup(name='ip.theme.fundraising',
           'setuptools',
           'plone.resource',
           'plone.app.theming',
+          'z3c.jbot',
       ],
       entry_points="""
       # -*- Entry points: -*-
