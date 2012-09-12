@@ -1105,6 +1105,19 @@ body.template-edit-personal-campaign #content .formTabs {
 #content .portletJanrainLoginRegister #form-login,
 .portletJanrainLoginRegister #form-login {
   width: 350px; }
+  #content .portletJanrainLoginRegister #form-login h3,
+  .portletJanrainLoginRegister #form-login h3 {
+    margin-top: 39px; }
+  #content .portletJanrainLoginRegister #form-login label,
+  .portletJanrainLoginRegister #form-login label {
+    display: none; }
+  #content .portletJanrainLoginRegister #form-login input#field-login-email,
+  .portletJanrainLoginRegister #form-login input#field-login-email {
+    font-size: 14px;
+    padding: 3px 5px;
+    width: 90%;
+    margin-top: 5px;
+    margin-bottom: 10px; }
 #content .portletJanrainLoginRegister a.tile,
 .portletJanrainLoginRegister a.tile {
   display: block;
