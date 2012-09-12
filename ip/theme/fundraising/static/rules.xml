@@ -45,18 +45,17 @@
     <replace css:theme-children="#content" css:content="#content-core" css:if-content="#content-core" />
     <replace css:theme-children="#content" css:content-children="#content" />
 
-    <prepend css:theme="#page-content" css:content="#viewlet-above-content" />
-    <append css:theme="#page-content" css:content="#viewlet-below-content" />
+    <prepend css:theme="#content" css:content="#viewlet-above-content" />
+    <append css:theme="#content" css:content="#viewlet-below-content" />
+    <append css:theme="#content" css:content="#portal-breadcrumbs" />
+    <drop css:content="#portal-breadcrumbs" css:if-not-content="#breadcrumbs-2" />
 
-    <prepend css:theme="#content" css:content=".portalMessage" />-->
     <!--<prepend css:theme="body" css:content="#portal-personaltools" />-->
 
     <!-- Edit Bar -->
     <replace css:theme-children="#edit-bar" css:content-children="#edit-bar" />
-<!--
-    <drop css:theme="#edit-bar" if-content="not(//*[@id='edit-bar'])" />
-    <drop css:theme="#edit-bar" css:if-theme="#personal-campaign-page-wrapper" />
--->
+    <drop css:theme="#edit-bar" css:if-content=".personal-campaign-toolbar" />
+    <drop css:theme="#edit-bar" css:if-not-content="#edit-bar" />
 
     <replace css:theme-children="#page-column-right" css:content="#portal-column-two" />
 

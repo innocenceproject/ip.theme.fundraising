@@ -1082,12 +1082,6 @@ dl.portlet.portletCampaignFundraisers
     border-radius: 0
     -moz-border-radius: 0
     
-    &.button-create-personal-campaign
-      background: url("/++theme++ip.theme.fundraising/img/button-start-fundraiser.png") no-repeat
-      height: 0
-      padding-top: 40px
-      overflow: hidden
-
 
 .portletCampaignStatus .count
 
@@ -1249,6 +1243,9 @@ dl.portlet.portletTestimonial
       border-bottom: 0
       font-size: 13px
 
+body.template-edit-personal-campaign #content .formTabs
+  display: none
+
 .share-message
   min-width: 150px
   margin-right: 50px
@@ -1286,22 +1283,6 @@ dl.portlet.portletTestimonial
   #form-login
     width: 350px
 
-  form#loginform
-    width: 170px
-    float: left
-    padding: 10px 15px
-    margin-right: 20px
-
-    input
-      width: 100%
-
-    br
-      display: inline
-
-    label
-      width: 60px
-      float: left
-
   a.tile
     display: block
     width: 100%
@@ -1311,9 +1292,20 @@ dl.portlet.portletTestimonial
   .formControls
     clear: both
 
-  .field
-    float: left
-    width: 160px
-
 a:link, a:visited
   color: inherit
+
+.suppressVisualEditor
+  display: none
+
+#viewlet-above-content
+  #portal-breadcrumbs
+    display: none
+
+#portal-breadcrumbs
+  margin-top: 20px
+  border-top: 1px solid $red
+  text-align: center
+
+  #breadcrumbs-home
+    display: none

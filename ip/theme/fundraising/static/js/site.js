@@ -87,43 +87,46 @@ function setupRecurlyForm() {
 }
 
 function setupAuthnetDpmForm() {
-    var form = $('form.donation-form-authnet-dpm');
-    if (form.length == 0) {
-        return;
-    }
-
-    // Turn off AJAX request caching to ensure a stale fingerprint doesn't get cached
-    $.ajaxSetup({ cache: false });
-
-    // Concatenate expiration month/year
-    var exp_month = form.find('select.card-expiration-month');
-    var exp_year = form.find('select.card-expiration-year');
-    var exp_full = form.find('input[name="x_exp_date"]');
-    exp_full.val(exp_month.val() + exp_year.val());
-    exp_month.change(function () {
-        exp_full.val(exp_month.val() + exp_year.val());
-    })
-    exp_year.change(function () {
-        exp_full.val(exp_month.val() + exp_year.val());
-    })
-
-    // Setup populate of Authorize.net transaction description field
-    var first_name = form.find("input[name='x_first_name']").change(populateAuthnetDescription);
-    var last_name = form.find("input[name='x_last_name']").change(populateAuthnetDescription);
-    var amount = form.find("input[name='x_amount']").change(populateAuthnetDescription);
-    var description = form.find("input[name='x_description']").change(populateAuthnetDescription);
-
-    // Require integer in account field
-    amount.change(function () {
-        if (form_input_is_int($(this).val()) == false) {
-            alert('Please enter a whole number for the Amount');
+    var forms = $('form.donation-form-authnet-dpm');
+    forms.each(function () {
+        var form = $(this);
+        if (form.length == 0) {
+            return;
         }
+    
+        // Turn off AJAX request caching to ensure a stale fingerprint doesn't get cached
+        $.ajaxSetup({ cache: false });
+    
+        // Concatenate expiration month/year
+        var exp_month = form.find('select.card-expiration-month');
+        var exp_year = form.find('select.card-expiration-year');
+        var exp_full = form.find('input[name="x_exp_date"]');
+        exp_full.val(exp_month.val() + exp_year.val());
+        exp_month.change(function () {
+            exp_full.val(exp_month.val() + exp_year.val());
+        })
+        exp_year.change(function () {
+            exp_full.val(exp_month.val() + exp_year.val());
+        })
+    
+        // Setup populate of Authorize.net transaction description field
+        var first_name = form.find("input[name='x_first_name']").change(populateAuthnetDescription);
+        var last_name = form.find("input[name='x_last_name']").change(populateAuthnetDescription);
+        var amount = form.find("input[name='x_amount']").change(populateAuthnetDescription);
+        var description = form.find("input[name='x_description']").change(populateAuthnetDescription);
+    
+        // Require integer in account field
+        amount.change(function () {
+            if (form_input_is_int($(this).val()) == false) {
+                alert('Please enter a whole number for the Amount');
+            }
+        });
+    
+        // Setup the authnet dpm fingerprint to refresh every 10 minutes
+        var fingerprintRefresh = setInterval(function () {
+            updateAuthnetDpmFingerprint(form);
+        }, 600000);
     });
-
-    // Setup the authnet dpm fingerprint to refresh every 10 minutes
-    var fingerprintRefresh = setInterval(function () {
-        updateAuthnetDpmFingerprint(form);
-    }, 600000);
 }
 
 function handleHonoraryTypeChange() {
@@ -532,4 +535,12 @@ $(document).ready(function () {
             placeholder();
         }
     });
+
+    // If there was a donation form error on the page, select the tab with an error
+    $('.donation-form-error').each(function () {
+        var tab_index = $(this).parents('.panel').prevAll().length; 
+        $(this).parents('.donation-form-wrapper').find('.tabs').data('tabs').click(tab_index); 
+    });
+
+    
 });

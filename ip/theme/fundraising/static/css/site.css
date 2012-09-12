@@ -927,11 +927,6 @@ dl.portlet.portletCampaignFundraisers a.button {
   border: 0;
   border-radius: 0;
   -moz-border-radius: 0; }
-  dl.portlet.portletCampaignFundraisers a.button.button-create-personal-campaign {
-    background: url("/++theme++ip.theme.fundraising/img/button-start-fundraiser.png") no-repeat;
-    height: 0;
-    padding-top: 40px;
-    overflow: hidden; }
 
 .donor-quote {
   text-align: left;
@@ -1076,6 +1071,9 @@ dl.portlet.portletTestimonial {
       border-bottom: 0;
       font-size: 13px; }
 
+body.template-edit-personal-campaign #content .formTabs {
+  display: none; }
+
 .share-message {
   min-width: 150px;
   margin-right: 50px;
@@ -1107,22 +1105,6 @@ dl.portlet.portletTestimonial {
 #content .portletJanrainLoginRegister #form-login,
 .portletJanrainLoginRegister #form-login {
   width: 350px; }
-#content .portletJanrainLoginRegister form#loginform,
-.portletJanrainLoginRegister form#loginform {
-  width: 170px;
-  float: left;
-  padding: 10px 15px;
-  margin-right: 20px; }
-  #content .portletJanrainLoginRegister form#loginform input,
-  .portletJanrainLoginRegister form#loginform input {
-    width: 100%; }
-  #content .portletJanrainLoginRegister form#loginform br,
-  .portletJanrainLoginRegister form#loginform br {
-    display: inline; }
-  #content .portletJanrainLoginRegister form#loginform label,
-  .portletJanrainLoginRegister form#loginform label {
-    width: 60px;
-    float: left; }
 #content .portletJanrainLoginRegister a.tile,
 .portletJanrainLoginRegister a.tile {
   display: block;
@@ -1132,10 +1114,19 @@ dl.portlet.portletTestimonial {
 #content .portletJanrainLoginRegister .formControls,
 .portletJanrainLoginRegister .formControls {
   clear: both; }
-#content .portletJanrainLoginRegister .field,
-.portletJanrainLoginRegister .field {
-  float: left;
-  width: 160px; }
 
 a:link, a:visited {
   color: inherit; }
+
+.suppressVisualEditor {
+  display: none; }
+
+#viewlet-above-content #portal-breadcrumbs {
+  display: none; }
+
+#portal-breadcrumbs {
+  margin-top: 20px;
+  border-top: 1px solid #993300;
+  text-align: center; }
+  #portal-breadcrumbs #breadcrumbs-home {
+    display: none; }
