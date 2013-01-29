@@ -344,7 +344,7 @@ article
     display: none
 
 
-form.donation-form
+#content form.donation-form
   background-color: #eee
 
   fieldset
@@ -783,6 +783,100 @@ form.donation-form
       
           @media screen and (max-width: $screen-phone-wide-min)
             font-size: 24px
+
+  &.product-form
+    fieldset.fieldset-donation-amount fieldset.product-fieldset
+      background: white
+      border: 1px solid #e4e4e4
+      border-radius: 7px
+      margin-left: 20px
+      padding-top: 50px
+      padding-bottom: 20px
+      margin-bottom: 20px
+
+      .product-fieldset-description
+        color: #444
+        font-size: 14px
+        padding: 7px 20px
+        margin-bottom: 10px
+
+    fieldset.fieldset-donation-amount,
+    fieldset.product-fieldset
+      margin-left: 0
+      margin-top: 0
+      padding-left: 0
+      background-image: none
+      border-top: 1px dashed #999
+
+      legend
+        width: 543px
+        text-align: left
+        position: absolute
+        display: block
+        background: url("/++theme++ip.theme.fundraising/img/section-header-background.png") left 40px no-repeat
+        color: $red
+        font-weight: normal
+        font-size: 21px !important
+        padding: 19px 10px 20px 23px
+        margin: -50px 0 0 0
+
+    .field.field-donation-amount
+      .field-amount
+        width: 100%
+        float: none
+        clear: both
+        border-top: 1px dashed #999
+        padding: 10px 0
+        margin-top: 20px
+
+        label.currency
+          width: 20%
+          margin-right: 0
+
+        .field-total input
+          width: 25%
+
+      a.button-checkout
+        float: right
+        display: none
+        background-color: #ccc
+        border: 1px solid #999
+        color: #555
+
+      a.button-checkout.available
+        display: block
+        
+
+    .donation-product
+      margin-left: 20px
+      clear: both
+      padding-bottom: 5px
+      margin-bottom: 10px
+      border-bottom: 1px dashed #ccc
+    
+      .field-product-quantity
+        width: 60px
+        text-align: center
+        font-size: 16px
+        padding: 5px 7px
+        display: block
+        float: left
+        margin: 4px 15px 10px 0
+
+      .price-wrapper
+        font-size: 14px
+        color: #777
+        font-weight: normal
+        font-style: italic
+
+      label
+        font-size: 16px
+        font-weight: bold
+        padding-top: 3px
+
+      .product-description
+        color: #777
+        font-size: 14px
 
 .field-error-message
   /* supply height to ensure consistent positioning for every browser */
