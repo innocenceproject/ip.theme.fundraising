@@ -1071,8 +1071,15 @@ dl.portlet.portletTestimonial {
       border-bottom: 0;
       font-size: 13px; }
 
+body.template-promote .personal-campaign-toolbar .tool-promote a {
+  background-color: #cccccc; }
+
 body.template-edit-personal-campaign #content .formTabs {
   display: none; }
+
+.personal-campaign.compact h2 {
+  height: auto;
+  background-image: none; }
 
 .share-message {
   min-width: 150px;
@@ -1099,8 +1106,14 @@ body.template-edit-personal-campaign #content .formTabs {
     border-bottom: 0;
     float: left; }
 
-.login-portlet-wrapper .formTabs {
+#content .login-portlet-wrapper dl.login-portlets.enableFormTabbing .formTabs {
   display: none; }
+#content .login-portlet-wrapper dl.login-portlets.enableFormTabbing .portlet.portletLogin dd.portletItem {
+  padding: 20px; }
+#content .login-portlet-wrapper dl.login-portlets.enableFormTabbing .portlet.portletLogin .field input {
+  width: 300px;
+  padding: 3px 5px;
+  font-size: 16px; }
 
 #content .portletJanrainLoginRegister #form-login,
 .portletJanrainLoginRegister #form-login {

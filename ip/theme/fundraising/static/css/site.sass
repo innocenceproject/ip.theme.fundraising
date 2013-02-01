@@ -1243,8 +1243,16 @@ dl.portlet.portletTestimonial
       border-bottom: 0
       font-size: 13px
 
+body.template-promote .personal-campaign-toolbar .tool-promote a
+  background-color: #ccc
+
 body.template-edit-personal-campaign #content .formTabs
   display: none
+
+.personal-campaign.compact
+  h2
+    height: auto
+    background-image: none
 
 .share-message
   min-width: 150px
@@ -1274,9 +1282,19 @@ body.template-edit-personal-campaign #content .formTabs
     border-bottom: 0
     float: left
 
-.login-portlet-wrapper
+#content .login-portlet-wrapper dl.login-portlets.enableFormTabbing
+
   .formTabs
     display: none
+
+  .portlet.portletLogin
+    dd.portletItem
+      padding: 20px
+    .field input
+      width: 300px
+      padding: 3px 5px
+      font-size: 16px
+
 
 #content .portletJanrainLoginRegister,
 .portletJanrainLoginRegister
@@ -1304,6 +1322,7 @@ body.template-edit-personal-campaign #content .formTabs
 
   .formControls
     clear: both
+
 
 a:link, a:visited
   color: inherit
