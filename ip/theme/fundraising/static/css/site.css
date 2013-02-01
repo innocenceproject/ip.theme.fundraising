@@ -259,6 +259,9 @@ article .portlet {
   #content .portlet .portletFooter {
     display: none; }
 
+#content-core .next-steps {
+  display: none; }
+
 .next-steps h2 {
   margin: 0; }
 
@@ -1092,19 +1095,20 @@ a.button:hover {
 .thank-you-message {
   padding-top: 18px; }
 
-dl.portlet.portletTestimonial {
+dl.portlet.portletDonorQuote {
   text-align: left; }
-  dl.portlet.portletTestimonial #formfield-form-widgets-contact_sf_id,
-  dl.portlet.portletTestimonial #formfield-form-widgets-donation_id,
-  dl.portlet.portletTestimonial .formHelp,
-  dl.portlet.portletTestimonial #formfield-form-widgets-amount {
+  dl.portlet.portletDonorQuote #formfield-form-widgets-contact_sf_id,
+  dl.portlet.portletDonorQuote #formfield-form-widgets-donation_id,
+  dl.portlet.portletDonorQuote #formfield-form-widgets-key,
+  dl.portlet.portletDonorQuote .formHelp,
+  dl.portlet.portletDonorQuote #formfield-form-widgets-amount {
     display: none; }
-  dl.portlet.portletTestimonial textarea {
+  dl.portlet.portletDonorQuote textarea {
     width: 100%;
     height: 50px; }
-  dl.portlet.portletTestimonial input {
+  dl.portlet.portletDonorQuote input {
     width: 100%; }
-  dl.portlet.portletTestimonial .portletItem {
+  dl.portlet.portletDonorQuote .portletItem {
     text-align: left; }
 
 #content {
