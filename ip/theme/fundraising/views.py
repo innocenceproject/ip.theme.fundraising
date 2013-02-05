@@ -1,3 +1,4 @@
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from collective.salesforce.fundraising.fundraising_campaign import ThankYouView as BaseThankYouView
 from collective.salesforce.fundraising.fundraising_campaign import ThankYouEmail as BaseThankYouEmail
 from collective.salesforce.fundraising.fundraising_campaign import HonoraryEmail as BaseHonoraryEmail
@@ -50,19 +51,19 @@ class DonationThankYouEmail(BaseDonationThankYouEmail, grok.View):
     grok.context(IDonation)
     grok.require('zope2.View')
     grok.name('thank-you-email')
-    grok.template('donation-thank-you-email')
     grok.layer(IInnocenceProjectFundraisingTheme)
+    email_template = ViewPageTemplateFile('views_templates/donation-thank-you-email.pt')
 
 class DonationHonoraryEmail(BaseDonationHonoraryEmail, grok.View):
     grok.context(IDonation)
     grok.require('zope2.View')
     grok.name('honorary-email')
-    grok.template('donation-honorary-email')
     grok.layer(IInnocenceProjectFundraisingTheme)
+    email_template = ViewPageTemplateFile('views_templates/donation-honorary-email.pt')
 
 class DonationMemorialEmail(BaseDonationMemorialEmail, grok.View):
     grok.context(IDonation)
     grok.require('zope2.View')
     grok.name('memorial-email')
-    grok.template('donation-memorial-email')
     grok.layer(IInnocenceProjectFundraisingTheme)
+    email_template = ViewPageTemplateFile('views_templates/donation-memorial-email.pt')
