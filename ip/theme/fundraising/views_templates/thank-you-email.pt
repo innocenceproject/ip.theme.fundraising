@@ -6,11 +6,11 @@
       <tr>
         <td>
        
-          <p>Dear <span tal:replace="view/receipt_view/person/first_name" />,</p>
+          <p>Dear <span tal:replace="view/receipt_view/contact/FirstName" />,</p>
  
-          <p>Please accept our thanks for your generous gift of <span tal:replace="python: '$%d' % view.context.amount" />. We are honored by this expression of support, and deeply appreciative of your commitment to advancing the cause of justice.</p>
+          <p>Please accept our thanks for your generous gift of <span tal:replace="python: '$%d' % int(float(view.receipt_view.donation.Amount))" />. We are honored by this expression of support, and deeply appreciative of your commitment to advancing the cause of justice.</p>
  
-          <p>DNA testing has exonerated more than 300 people in the United States since 1989, including eighteen who were sentenced to death. Each wrongful conviction represents a tragic lapse of our nation's commitment to ensuring the freedom and safety of its people. Yet each exoneration proves that we can address the systemic defects that have been proven to lead to the conviction of innocent men and women. Your essential support helps the IP continue to free the innocent and reaffirm the basic promise of our justice system.</p>
+          <p>DNA testing has exonerated more than 290 people in the United States since 1989, including seventeen who were sentenced to death. Each wrongful conviction represents a tragic lapse of our nation's commitment to ensuring the freedom and safety of its people. Yet each exoneration proves that we can address the systemic defects that have been proven to lead to the conviction of innocent men and women. Your essential support helps the IP continue to free the innocent and reaffirm the basic promise of our justice system.</p>
 
           <p>If you have any questions, please contact us at 212-364-5976 or <a href="mailto:info@innocenceproject.org">info@innocenceproject.org</a>. Thank you again for your generosity. Please know how deeply we appreciate your partnership in our work.</p>
 
