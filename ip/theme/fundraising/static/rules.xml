@@ -7,6 +7,15 @@
     <theme href="index.html" />
     <notheme css:if-content="#content.dialog-wrapper"/>
 
+    <notheme if-path="presentation_view"/>
+    <notheme if-path="@@manage-portlets"/>
+    <notheme if-path="@@manage-viewlets"/>
+    <notheme if-path="source_editor.htm"/>
+    <notheme if-path="ploneimage.htm"/>
+    <notheme if-path="anchor.htm"/>
+    <notheme if-path="table.htm"/>
+    <notheme if-path="attributes.htm"/>
+
     <!-- Head: title -->
     <replace theme="/html/head/title" content="/html/head/title" />
 
@@ -61,9 +70,19 @@
 
     <!-- Edit Bar -->
     <replace css:theme-children="#edit-bar" css:content-children="#edit-bar" />
-    <drop css:theme="#edit-bar" css:if-content=".personal-campaign-toolbar" />
+    <drop css:theme="#edit-bar" css:if-content="#personal-campaign-toolbar" />
     <drop css:theme="#edit-bar" css:if-not-content="#edit-bar" />
 
     <replace css:theme-children="#page-column-right" css:content="#portal-column-two" />
+
+    <!-- Personal Fundraising Login -->
+    <before css:theme="#page-wrapper" css:content="#personal-fundraising-login" />
+
+    <!-- Personal Page Fundraiser Viewlet -->
+    <before css:theme="#content" css:content="#personal-campaign-fundraiser" />
+
+    <!-- Personal Page Toolbar Viewlet -->
+    <before css:theme="#content" css:content="#personal-campaign-toolbar" />
+
 
 </rules>

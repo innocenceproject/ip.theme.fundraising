@@ -26,16 +26,18 @@ came_from = REQUEST.get('came_from', None)
 next = REQUEST.get('next', None)
 
 # if the currently logged in member has fundraisers, redirect there
-member = membership_tool.getAuthenticatedMember()
-member_id = member.id
-pc = context.portal_catalog
-personal_fundraiser = 'collective.salesforce.fundraising.personalcampaignpage'
-my_fundraisers = pc(portal_type=personal_fundraiser, Creator=member_id)
-if my_fundraisers:
-    if len(my_fundraisers) > 1:
-        came_from = context.portal_url() + '/@@my_fundraisers'
-    else:
-        came_from = my_fundraisers[0].getURL()
+# If a came_from url was passed and contains @@ for a view, go there instead
+if came_from is None or came_from.find('@@') == -1:
+    member = membership_tool.getAuthenticatedMember()
+    member_id = member.id
+    pc = context.portal_catalog
+    personal_fundraiser = 'collective.salesforce.fundraising.personalcampaignpage'
+    my_fundraisers = pc(portal_type=personal_fundraiser, Creator=member_id)
+    if my_fundraisers:
+        if len(my_fundraisers) > 1:
+            came_from = context.portal_url() + '/@@my_fundraisers'
+        else:
+            came_from = my_fundraisers[0].getURL()
 
 # if we weren't called from something that set 'came_from' or if HTTP_REFERER
 # is the 'logged_out' page, return the default 'login_success' form

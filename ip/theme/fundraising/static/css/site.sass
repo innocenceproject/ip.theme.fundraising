@@ -1292,6 +1292,10 @@ dl.portlet.portletDonorQuote
   .portletItem
     text-align: left
 
+#fundraising-campaign-header-image
+  padding-bottom: 10px
+  margin-left: -1px
+
 #content 
   font-size: inherit
 
@@ -1305,21 +1309,56 @@ dl.portlet.portletDonorQuote
         dd.portletItem
           padding: 0
 
+#personal-fundraising-login
+  text-align: right
+  padding-bottom: 1px
+  height: 21px
+  padding-right: 20px
+  
+  h5
+    display: inline
+    font-weight: normal
+    font-size: 12px
+
+  a
+    display: block
+    float: right
+    background-color: #ddd
+    margin-left: 20px
+    border-radius: 10px
+    -moz-border-radius: 10px
+    padding: 3px 7px
+    font-size: 12px
+    margin-top: -1px
+
+    &:hover
+      background-color: #eee
+   
+
 .personal-campaign-description
   font-size: 18px
   color: #555
   margin-bottom: 20px
 
-#content .personal-campaign-toolbar
+#personal-campaign-fundraiser
+  background: black
+  color: white
+  margin-top: -10px
+  padding-right: 20px
+  text-align: center
+
+  h3
+    color: white
+    font-size: 13px
+    padding: 3px 20px
+
+#personal-campaign-toolbar
   background-color: #e8e8e8
-  border-radius: 10px
   margin-bottom: 10px
 
   h3
     float: left
     background-color: $red
-    border-top-left-radius: 10px
-    border-bottom-left-radius: 10px
     font-weight: normal
     padding: 7px 10px 8px 20px
     margin-right: 10px
@@ -1337,12 +1376,9 @@ dl.portlet.portletDonorQuote
       display: block
       color: #777
       text-decoration: none
-      padding: 7px 10px 4px 10px
+      padding: 12px 10px 4px 10px
       border-bottom: 0
-      font-size: 13px
-
-body.template-promote .personal-campaign-toolbar .tool-promote a
-  background-color: #ccc
+      font-size: 16px
 
 body.template-edit-personal-campaign #content .formTabs
   display: none
@@ -1424,6 +1460,25 @@ body.template-edit-personal-campaign #content .formTabs
 
 a:link, a:visited
   color: inherit
+
+#content a:visited, dl.portlet a:visited
+  color: inherit
+
+#content .pullquote
+  padding: 5px 10px
+  border: 1px solid #ccc
+  border-radius: 10px
+  background-color: #eaeaea
+
+  a, a:link, a:visited
+    font-size: 24px
+    letter-spacing: 0px
+    font-weight: normal
+    color: #427597
+    text-decoration: none
+    display: block
+    border-bottom: none
+    text-align: center
 
 .suppressVisualEditor
   display: none
