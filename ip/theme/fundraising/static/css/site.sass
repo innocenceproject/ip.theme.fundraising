@@ -1349,24 +1349,31 @@ dl.portlet.portletDonorQuote
 
   h3
     color: white
-    font-size: 13px
-    padding: 3px 20px
+    font-size: 16px
+    padding: 10px 20px
 
 #personal-campaign-toolbar
-  background-color: #e8e8e8
+  background-color: $red
+  color: white
   margin-bottom: 10px
 
   h3
     float: left
-    background-color: $red
-    font-weight: normal
-    padding: 7px 10px 8px 20px
-    margin-right: 10px
-    font-size: 16px
+    margin: 0
+    padding: 0
+    height: 42px
     
     a
-      color: white
+      display: block
+      font-weight: normal
+      padding: 6px 10px 6px 10px
+      margin-right: 10px
+      font-size: 16px
+      color: #e8e8e8
     
+    a:hover
+      backgorund-color: #330000 !important
+
   li
     display: block
     float: left
@@ -1374,11 +1381,36 @@ dl.portlet.portletDonorQuote
 
     a
       display: block
-      color: #777
+      color: #e8e8e8
       text-decoration: none
-      padding: 12px 10px 4px 10px
+      padding: 12px 10px 12px 10px
       border-bottom: 0
       font-size: 16px
+
+    a:hover
+      backgorund-color: #330000 !important
+
+body.template-view.portaltype-collective-salesforce-fundraising #personal-campaign-toolbar
+  h3
+    a
+      color: white
+      background-color: black
+body.template-promote #personal-campaign-toolbar
+  li.tool-promote
+    a
+      color: white
+      background-color: black
+body.template-donors #personal-campaign-toolbar
+  li.tool-donors
+    a
+      color: white
+      background-color: black
+body.template-edit-personal-campaign #personal-campaign-toolbar
+  li.tool-edit
+    a
+      color: white
+      background-color: black
+    
 
 body.template-edit-personal-campaign #content .formTabs
   display: none
@@ -1494,3 +1526,9 @@ a:link, a:visited
 
   #breadcrumbs-home
     display: none
+
+body.template-donors.portaltype-collective-salesforce-fundraising #sidebar
+  display: none
+
+body.template-donors.portaltype-collective-salesforce-fundraising #content
+  width: 90%
