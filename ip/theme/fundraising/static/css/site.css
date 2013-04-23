@@ -1118,7 +1118,8 @@ dl.portlet.portletDonorQuote {
 #content {
   font-size: inherit; }
   #content .login-portlet-wrapper {
-    width: 800px; }
+    width: 900px;
+    margin-left: -20px; }
     #content .login-portlet-wrapper dl.login-portlets.enableFormTabbing dd {
       margin: 0;
       padding: 0; }
