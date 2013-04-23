@@ -84,5 +84,7 @@
     <!-- Personal Page Toolbar Viewlet -->
     <before css:theme="#content" css:content="#personal-campaign-toolbar" />
 
+    <!-- plone messages -->
+    <prepend css:theme="#content" css:content=".portalMessage" />
 
 </rules>
