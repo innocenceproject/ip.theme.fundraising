@@ -1077,6 +1077,11 @@ a.button:hover {
   width: 175px;
   height: 40px; }
 
+.form-buttons p {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
 #edit-bar {
   background-color: #993300;
   border: 0.25em solid #993300;
