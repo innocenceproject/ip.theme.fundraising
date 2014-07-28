@@ -2,15 +2,33 @@
   clear: both; }
 
 body {
-  background: white;
-  font-family: Arial, sans-serif; }
-
+  background-color: #404146;
+  font-family: Arial, sans-serif;
+}
 #page-wrapper {
-  border: 1px solid #555555;
-  padding-bottom: 30px; }
-  @media screen and (max-width: 480px) {
+  width: 991px;
+  margin: 45px auto;
+  box-shadow: 0 0 5px #111111;
+  background-color: #ffffff;
+  padding: 14px 0 0;
+}
+@media screen and (max-width: 991px) {
     #page-wrapper {
-      border: 0; } }
+        width: auto;
+    }
+}
+
+#content a:link,
+#content a:visited {
+    color: #97330f;
+}
+#content a:hover {
+    color: #000000 !important;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
 
 header #site-logo img {
   width: 201px;
@@ -134,7 +152,6 @@ a {
 h2 {
   background: url("/++theme++ip.theme.fundraising/img/section-header-background.png") left 35px no-repeat;
   color: #993300;
-  font-weight: normal;
   font-size: 21px;
   height: 29px;
   padding: 9px 10px 20px 40px;
