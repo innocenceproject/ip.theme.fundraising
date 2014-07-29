@@ -165,6 +165,13 @@ h2 {
       font-size: 14px;
       background-position: left 25px; } }
 
+li#portaltab-donate a {
+    border-bottom: 1px solid #ffffff;
+}
+input.searchField {
+    -moz-appearance: none;
+}
+
 article aside {
   width: 280px;
   float: right; }

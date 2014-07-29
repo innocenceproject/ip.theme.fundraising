@@ -27,12 +27,20 @@
     <after theme="/html/head/link[1]" content="/html/head/script" />
     <after theme="/html/head/link[1]" content="/html/head/link" />
     <after theme="/html/head/link[1]" content="/html/head/style" />
+    <after theme="/html/head/link[1]">
+        <link rel="stylesheet" type="text/css" media="screen" href="{$main_site_url}/++theme++inpr.theme/static/header.css" />
+    </after>
 
     <!-- Body -->
     <merge attributes="class" css:theme="body" css:content="body" />
 
-    <!-- swap out the header image if available -->
-    <replace css:theme-children="header#site-header" css:content="#fundraising-campaign-header-image" css:if-content="#fundraising-campaign-header-image" />
+    <!-- Display header and footer from innocenceproject.org -->
+    <replace css:theme="#site-header">
+        <xsl:apply-templates select="document($main_site_url)//*[@id = 'portal-header']" mode="raw"/>
+    </replace>
+    <after css:theme-children="#page-wrapper">
+        <xsl:apply-templates select="document($main_site_url)//*[@id = 'portal-footer']" mode="raw"/>
+    </after>
 
     <!-- Switch between the big and small header setup.  Big setup embeds Description while small just shows title -->
     <prepend css:theme="article header" css:if-content="h1.documentFirstHeading.hidden"><xsl:attribute name="style"><xsl:value-of select="/html/body/@style"/> display:none </xsl:attribute></prepend>
