@@ -5,4 +5,11 @@
         cacheable="True" compression="safe" cookable="True"
         enabled="True" expression=""  insert-after="*"/>
 -->
+
+<stylesheet
+       id="++theme++ip.theme.fundraising/css/header.css"
+       cacheable="True" compression="safe" cookable="True"
+       enabled="True" expression=""  insert-after="*"
+       applyPrefix="True"/>
+       
 </object>

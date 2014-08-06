@@ -27,9 +27,6 @@
     <after theme="/html/head/link[1]" content="/html/head/script" />
     <after theme="/html/head/link[1]" content="/html/head/link" />
     <after theme="/html/head/link[1]" content="/html/head/style" />
-    <after theme="/html/head/link[1]">
-        <link rel="stylesheet" type="text/css" media="screen" href="{$main_site_url}/++theme++inpr.theme/static/header.css" />
-    </after>
 
     <!-- Body -->
     <merge attributes="class" css:theme="body" css:content="body" />
