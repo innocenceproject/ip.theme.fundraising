@@ -21,6 +21,7 @@
    background: #97330f;
    white-space: normal;
    border-right: 1px solid #ffffff;
+   width: 140px;
    width: calc(14.285% - 1px);
    text-align: center;
    margin-bottom: 1px;

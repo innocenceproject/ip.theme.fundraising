@@ -33,7 +33,14 @@
 
     <!-- Display header and footer from innocenceproject.org -->
     <replace css:theme="#site-header">
-        <xsl:apply-templates select="document($main_site_url)//*[@id = 'portal-header']" mode="raw"/>
+        <xsl:apply-templates select="document($main_site_url)//*[@id = 'nav-toggle']" mode="raw"/>
+        <xsl:apply-templates select="document($main_site_url)//*[@id = 'search-toggle']" mode="raw"/>
+        <a id="portal-logo" href="{$main_site_url}">
+            <img alt="Innocence Project" src="/++theme++ip.theme.fundraising/images/logo.png" />
+        </a>
+        <xsl:apply-templates select="document($main_site_url)//*[@id = 'portal-searchbox']" mode="raw"/>
+        <xsl:apply-templates select="document($main_site_url)//*[@id = 'social-icons']" mode="raw"/>
+        <xsl:apply-templates select="document($main_site_url)//*[@id = 'portal-globalnav']" mode="raw"/>
     </replace>
     <after css:theme-children="#page-wrapper">
         <xsl:apply-templates select="document($main_site_url)//*[@id = 'portal-footer']" mode="raw"/>
