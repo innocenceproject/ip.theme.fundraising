@@ -1330,3 +1330,7 @@ body.template-donors.portaltype-collective-salesforce-fundraising #sidebar {
 
 body.template-donors.portaltype-collective-salesforce-fundraising #content {
   width: 90%; }
+  
+#content #double-the-donation a:link {
+    border: none;
+}

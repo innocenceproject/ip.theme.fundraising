@@ -57,7 +57,7 @@
 
     <!-- Populate content core with the Thank You page's message and receipt, or use #content-core if it exists, if not fall back to #content -->
     <replace css:theme-children="#content" css:content=".thank-you-message, .donation-receipt-wrapper" css:if-content="body.template-thank-you" />
-    <replace css:theme-children="#content" css:content=".thank-you-message, .donation-receipt-wrapper" css:if-content="body.template-view.portaltype-collective-salesforce-fundraising-donation" />
+    <replace css:theme-children="#content" css:content=".thank-you-message, .donation-receipt-wrapper, #double-the-donation" css:if-content="body.template-view.portaltype-collective-salesforce-fundraising-donation" />
     <replace css:theme-children="#content" css:content="#content-core" css:if-content="#content-core" />
     <replace css:theme-children="#content" css:content-children="#content" />
 
