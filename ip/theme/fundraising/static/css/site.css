@@ -2,15 +2,21 @@
   clear: both; }
 
 body {
-  background: white;
+  background-color: #404146;
   font-family: Arial, sans-serif; }
 
 #page-wrapper {
-  border: 1px solid #555555;
-  padding-bottom: 30px; }
-  @media screen and (max-width: 480px) {
+  width: 991px;
+  margin: 45px auto;
+  box-shadow: 0 0 5px #111111;
+  background-color: #ffffff;
+  padding: 0;
+}
+@media screen and (max-width: 991px) {
     #page-wrapper {
-      border: 0; } }
+        width: auto;
+    }
+}
 
 header #site-logo img {
   width: 201px;
@@ -147,6 +153,13 @@ h2 {
     h2 {
       font-size: 14px;
       background-position: left 25px; } }
+
+li#portaltab-donate a {
+    border-bottom: 1px solid #ffffff;
+}
+input.searchField {
+    -moz-appearance: none;
+}
 
 article aside {
   width: 280px;

@@ -33,7 +33,7 @@
 
     <!-- swap out the header image if available -->
     <replace css:theme-children="header#site-header" css:content="#fundraising-campaign-header-image" css:if-content="#fundraising-campaign-header-image" />
-
+    
     <!-- Switch between the big and small header setup.  Big setup embeds Description while small just shows title -->
     <prepend css:theme="article header" css:if-content="h1.documentFirstHeading.hidden"><xsl:attribute name="style"><xsl:value-of select="/html/body/@style"/> display:none </xsl:attribute></prepend>
     <replace css:theme-children="article header.article-header h1" css:content-children="h1.documentFirstHeading" />
