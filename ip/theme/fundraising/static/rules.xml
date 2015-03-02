@@ -24,9 +24,9 @@
     <prepend theme="/html/head" content="/html/head/meta" />
 
     <!-- css and js includes -->
-    <after theme="/html/head/link[1]" content="/html/head/script" />
-    <after theme="/html/head/link[1]" content="/html/head/link" />
-    <after theme="/html/head/link[1]" content="/html/head/style" />
+    <after theme="/html/head/title" content="/html/head/script" />
+    <after theme="/html/head/title" content="/html/head/link" />
+    <after theme="/html/head/title" content="/html/head/style" />
 
     <!-- Body -->
     <merge attributes="class" css:theme="body" css:content="body" />
