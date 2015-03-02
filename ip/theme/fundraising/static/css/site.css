@@ -204,7 +204,7 @@ article div#content {
   @media screen and (max-width: 480px) {
     article section,
     article div#content {
-      width: 300px;
+      width: 270px;
       float: none;
       padding-left: 15px; } }
   article section header,
@@ -348,7 +348,7 @@ article .portlet {
     border: 0 !important;
     background: url("/++resource++collective.salesforce.fundraising.static/recurly-theme/images/dash.png") repeat-x left top; }
     #content form.donation-form fieldset.fieldset-donation-amount {
-      padding-bottom: 0;
+      padding-bottom: 10px;
       background-image: none; }
     @media screen and (max-width: 991px) {
       #content form.donation-form fieldset {
@@ -661,7 +661,25 @@ article .portlet {
     @media screen and (max-width: 480px) {
       #content form.donation-form.donation-form-product .field.field-donation-amount .field-amount .field-total {
         margin-top: 130px;
-        margin-left: 0; } }
+        margin-left: 0; }
+      #content form.donation-form .field input,
+      #content form.donation-form .field .subfield,
+      #content form.donation-form .field select,
+      #content form.donation-form .field .subfield.subfield-card-cvc,
+      #content form.donation-form .field .subfield.subfield-card-cvv {
+          width: 85%;
+          float: none;
+      }
+      #content form.donation-form .field .accepted-cards {
+          position: static;
+      }
+      #content form.donation-form .field .subfield.subfield-card-cvc .field-help,
+      #content form.donation-form .field .subfield.subfield-card-cvv .field-help {
+          text-align: left;
+          width: auto;
+          margin-left: 0;
+      }
+    }
     #content form.donation-form.donation-form-product .field.field-donation-amount .field-amount .field-total label {
       float: left;
       font-size: 18px; }
@@ -1043,7 +1061,11 @@ dl.portlet.portletCampaignFundraisers a.button {
 .form-buttons {
   margin-left: 110px;
   padding-bottom: 20px; }
-
+@media screen and (max-width: 480px){
+    .form-buttons {
+        margin-left: 30px;
+    }
+}
 .donation-form-wrapper .recurly button,
 .form-buttons input,
 .portletTestimonial #form-buttons-submit,
