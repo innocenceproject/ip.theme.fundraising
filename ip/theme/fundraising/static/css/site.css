@@ -1165,6 +1165,29 @@ dl.portlet.portletDonorQuote {
       padding: 0; }
     #content .login-portlet-wrapper dl.login-portlets.enableFormTabbing .portlet dd.portletItem {
       padding: 0; }
+#janrainEngageWrapper {
+    height: 200px;
+    width: 400px;
+    float: left;
+    border-right: 1px dotted #ccc;
+    padding-right: 15px;
+}
+#form-login {
+    width: 300px;
+    float: left;
+    margin-left: 15px;
+}
+#form-register {
+    clear: both;
+}
+.divider-or {
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 70px;
+    margin-left: -15px;
+    background-color: white;
+}
 
 #personal-fundraising-login {
   text-align: right;
@@ -1368,4 +1391,45 @@ body.template-donors.portaltype-collective-salesforce-fundraising #content {
   
 #content #double-the-donation a:link {
     border: none;
+}
+
+@media screen and (max-width: 991px) {
+    #content .login-portlet-wrapper {
+        width: 100%;
+    }
+    #janrainEngageWrapper {
+        border: none;
+    }
+    .divider-or {
+        float: none;
+        clear: both;
+        background-color: transparent;
+        margin: 0;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 481px) {
+    #content .portletJanrainLoginRegister {
+        margin-left: 10px;
+        width: 300px;
+    }
+    #content #janrainEngageWrapper {
+        border: none;
+        width: 297px;
+    }
+    #content .portletJanrainLoginRegister #form-login {
+        width: 270px;
+    }
+    #janrainEngageEmbed {
+        overflow: hidden;
+    }
+    #janrainView {
+        width: 285px;
+    }
+    #janrainProviderPages {
+        position: static !important;
+    }
+    #form-login {
+        width: 250px;
+    }
 }
