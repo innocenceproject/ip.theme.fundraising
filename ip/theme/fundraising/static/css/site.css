@@ -8,15 +8,19 @@ body {
 #page-wrapper {
     width: 958px;
     margin: 45px auto;
+    clear: both;
     box-shadow: 0 0 5px #111111;
     background-color: #ffffff;
     padding: 0;
 }
+#site-header {
+    position: relative;
+}
 header #site-logo img {
     width: 201px;
     position: absolute;
-    margin-left: 730px;
-    margin-top: -80px;
+    right: 50px;
+    margin-top: 30px;
     display: block;
     border: 5px solid #eaeaea;
 }
@@ -213,6 +217,10 @@ article .portlet a.button {
 #content form.donation-form {
     background-color: #eeeeee;
 }
+.field input[type="text"],
+.field input[type="email"] {
+    width: 100%;
+}
 #content form.donation-form fieldset {
     margin: 0;
     padding: 20px 20px 0 110px;
@@ -245,8 +253,16 @@ article .portlet a.button {
     border: 1px solid #a0a0a5;
     font-size: 16px;
     padding: 7px 5px;
-    width: 100%;
     color: black;
+    margin-right: 5px;
+}
+.fieldset-recurring-plan input {
+    float: left;
+    clear: left;
+    height: 25px;
+}
+.fieldset-recurring-plan label {
+    float: left;
 }
 #content form.donation-form .field input.placeholder {
     color: #999999;
@@ -672,6 +688,13 @@ article .portlet a.button {
 .donation-form-error em {
     display: block;
     padding: 0 30px;
+}
+.field.invalid input {
+  box-shadow: 0 0 1px 1px red;
+}
+input[type=submit][disabled] {
+  cursor: default;
+  opacity: 0.25;
 }
 #recurly-subscribe .recurly {
     width: 100%;
@@ -1271,15 +1294,16 @@ body.template-donors.portaltype-collective-salesforce-fundraising #content {
 
 /* ********************** 991 ********************** */
 @media screen and (max-width: 991px) {
-    body {
-        width: 728px;
-        padding: 12px 20px 60px;
-    }
+    body,
     #page-wrapper {
         width: auto;
     }
     header #site-logo img {
         margin-left: 515px;
+    }
+    #content img {
+        max-width: 100%;
+        height: auto;
     }
     #content .login-portlet-wrapper {
         width: 100%;
@@ -1310,13 +1334,13 @@ body.template-donors.portaltype-collective-salesforce-fundraising #content {
         font-size: 13px;
     }
     article aside {
-        width: 708px;
+        width: auto;
         padding: 10px 30px;
         float: none;
     }
     article section,
     article div#content {
-        width: 650px;
+        width: auto;
         padding-right: 30px;
         float: none;
     }
@@ -1327,29 +1351,23 @@ body.template-donors.portaltype-collective-salesforce-fundraising #content {
         margin-top: 20px;
     }
     #content form.donation-form fieldset {
-        padding-left: 120px
+        padding-left: 120px;
     }
     #content form.donation-form .field {
-        width: 340px
+        width: auto;
+        max-width: 100%;
     }
 }
 
 /* ********************** 767 ********************** */
 @media screen and (max-width: 767px) {
-    body {
-        width: 460px;
-        padding: 10px 15px 48px 5px;
-    }
     #page-wrapper {
         margin-top: 0;
     }
     header #site-logo img {
-        margin-top: -92px;
-        margin-left: 0;
+        position: static;
+        margin: 0;
         border: 0;
-    }
-    header #site-banner img {
-        margin-top: 45px;
     }
     .article-header {
         padding-left: 18px;
@@ -1372,17 +1390,6 @@ body.template-donors.portaltype-collective-salesforce-fundraising #content {
     h2 {
         font-size: 17px
     }
-    article aside {
-        width: 480px;
-        padding: 10px 18px;
-        float: none;
-    }
-    article section,
-    article div#content {
-        width: 400px;
-        float: none;
-        padding-left: 18px;
-    }
     article section header,
     article section h2,
     article div#content header,
@@ -1403,7 +1410,7 @@ body.template-donors.portaltype-collective-salesforce-fundraising #content {
         padding-left: 20px;
     }
     #content form.donation-form legend {
-        width: 100%;
+        width: 75%;
         margin-left: 0;
         float: none;
         clear: both;
@@ -1412,11 +1419,10 @@ body.template-donors.portaltype-collective-salesforce-fundraising #content {
         font-size: 12px !important;
     }
     #content form.donation-form .field {
-        width: 310px;
         padding: 14px;
     }
     #content form.donation-form .field.field-donation-amount .options {
-        width: 100%;
+        width: 330px;
         margin-bottom: 60px;
     }
     #content form.donation-form .field.field-donation-amount .field-amount {
@@ -1483,16 +1489,6 @@ body.template-donors.portaltype-collective-salesforce-fundraising #content {
 
 /* ********************** 480 ********************** */
 @media screen and (max-width: 480px) {
-    body {
-        width: 315px;
-        padding: 12px 0 60px 5px;
-    }
-    header #site-logo img {
-        margin-top: -76px;
-    }
-    header #site-banner img {
-        margin-top: 45px;
-    }
     #content .portletJanrainLoginRegister {
         margin-left: 10px;
         width: 300px;
@@ -1541,17 +1537,6 @@ body.template-donors.portaltype-collective-salesforce-fundraising #content {
     h2 {
         font-size: 14px;
     }
-    article aside {
-        width: 290px;
-        padding: 10px 15px;
-        float: none;
-    }
-    article section,
-    article div#content {
-        width: 270px;
-        float: none;
-        padding-left: 15px;
-    }
     article section header,
     article section h2,
     article div#content header,
@@ -1568,11 +1553,8 @@ body.template-donors.portaltype-collective-salesforce-fundraising #content {
     .donation-form-wrapper ul.tabs li {
         font-size: 11px
     }
-    #content form.donation-form fieldset {
-        padding-left: 20px
-    }
     #content form.donation-form legend {
-        width: 100%;
+        width: auto;
         margin-left: 0;
         float: none;
         clear: both;
@@ -1581,9 +1563,12 @@ body.template-donors.portaltype-collective-salesforce-fundraising #content {
         font-size: 11px !important;
     }
     #content form.donation-form .field {
-        width: 240px;
         clear: both;
         padding: 10px;
+    }
+    #content form.donation-form .field.field-donation-amount .options {
+        width: 225px;
+        margin-bottom: 60px;
     }
     #content form.donation-form .field.field-donation-amount .field-amount {
         margin-top: 130px;
@@ -1596,11 +1581,11 @@ body.template-donors.portaltype-collective-salesforce-fundraising #content {
         margin-top: 130px;
         margin-left: 0;
     }
-    #content form.donation-form .field input,
     #content form.donation-form .field .subfield,
     #content form.donation-form .field select,
     #content form.donation-form .field .subfield.subfield-card-cvc,
-    #content form.donation-form .field .subfield.subfield-card-cvv {
+    #content form.donation-form .field .subfield.subfield-card-cvv,
+    .fieldset-contact-info input {
         width: 85%;
         float: none;
     }
@@ -1618,5 +1603,10 @@ body.template-donors.portaltype-collective-salesforce-fundraising #content {
     }
     .form-buttons {
         margin-left: 30px
+    }
+}
+@media screen and (max-width: 320px) {
+    body {
+        width: 320px;
     }
 }
