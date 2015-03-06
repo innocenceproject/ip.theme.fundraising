@@ -327,9 +327,11 @@ article .portlet a.button {
     font-weight: bold;
     font-size: 24px;
     float: left;
-    width: 10%;
     margin-right: 5%;
     padding-top: 11px;
+}
+.subsection-help-free-the-innocent #content form.donation-form .field.field-donation-amount .field-amount label.currency {
+    width: 10%;
 }
 #content form.donation-form .field.field-donation-amount .field-amount input {
     background: url("/++theme++ip.theme.fundraising/img/amount-field-background.png") repeat-x top left;
@@ -572,7 +574,8 @@ article .portlet a.button {
     padding-bottom: 20px;
     margin-bottom: 20px;
 }
-#content form.donation-form.product-form fieldset.fieldset-donation-amount fieldset.product-fieldset .product-fieldset-description {
+#content form.donation-form.product-form fieldset.fieldset-donation-amount fieldset.product-fieldset .product-fieldset-description,
+#content form.donation-form.product-form fieldset.fieldset-donation-amount fieldset.product-fieldset .expand-link {
     color: #444444;
     font-size: 14px;
     padding: 7px 20px;
@@ -580,15 +583,15 @@ article .portlet a.button {
 }
 #content form.donation-form.product-form fieldset.fieldset-donation-amount,
 #content form.donation-form.product-form fieldset.product-fieldset {
+    position: relative;
     margin-left: 0;
     margin-top: 0;
     padding-left: 0;
     background-image: none;
     border-top: 1px dashed #999999;
 }
-#content form.donation-form.product-form fieldset.fieldset-donation-amount legend,
-#content form.donation-form.product-form fieldset.product-fieldset legend {
-    width: 543px;
+#content form.donation-form.product-form fieldset legend {
+    width: 75%;
     text-align: left;
     position: absolute;
     display: block;
@@ -607,7 +610,7 @@ article .portlet a.button {
     padding: 10px 0;
     margin-top: 20px;
 }
-#content form.donation-form.product-form .field.field-donation-amount .field-amount label.currency {
+.subsection-help-free-the-innocent #content form.donation-form.product-form .field.field-donation-amount .field-amount label.currency {
     width: 20%;
     margin-right: 0;
 }
@@ -1301,6 +1304,7 @@ body.template-donors.portaltype-collective-salesforce-fundraising #content {
     header #site-logo img {
         margin-left: 515px;
     }
+    #site-header img,
     #content img {
         max-width: 100%;
         height: auto;
@@ -1425,7 +1429,7 @@ body.template-donors.portaltype-collective-salesforce-fundraising #content {
         width: 330px;
         margin-bottom: 60px;
     }
-    #content form.donation-form .field.field-donation-amount .field-amount {
+    .subsection-help-free-the-innocent #content form.donation-form .field.field-donation-amount .field-amount {
         width: 200px;
         clear: both;
         position: absolute;
@@ -1484,6 +1488,13 @@ body.template-donors.portaltype-collective-salesforce-fundraising #content {
     dl.portlet .campaign-raised-text,
     .portlet .campaign-raised-text {
         font-size: 11px
+    }
+    .field-preview > div {
+        width: auto !important;
+        max-width: 100%;
+    }
+    .field-preview table {
+        width: 100% !important;
     }
 }
 
@@ -1603,6 +1614,9 @@ body.template-donors.portaltype-collective-salesforce-fundraising #content {
     }
     .form-buttons {
         margin-left: 30px
+    }
+    .field-preview table img {
+        width: ;
     }
 }
 @media screen and (max-width: 320px) {
