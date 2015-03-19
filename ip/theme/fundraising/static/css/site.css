@@ -1605,6 +1605,9 @@ body.template-donors.portaltype-collective-salesforce-fundraising #content {
     #formfield-form-widgets-image input {
         font-size: 80% !important;
     }
+    #double-the-donation iframe {
+        width: 100%;
+    }
 }
 
 /* ********************** 480 ********************** */
