@@ -1605,6 +1605,15 @@ body.template-donors.portaltype-collective-salesforce-fundraising #content {
     #double-the-donation iframe {
         width: 100%;
     }
+    #personal-fundraising-login a {
+        background: transparent;
+        color: #ffffff;
+        font-size: 14px;
+    }
+    #personal-fundraising-login a:hover {
+        background: transparent;
+        text-decoration: underline;
+    }
 }
 
 /* ********************** 480 ********************** */
