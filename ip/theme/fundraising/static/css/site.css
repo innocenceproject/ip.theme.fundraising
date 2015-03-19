@@ -884,6 +884,8 @@ dl.portlet.portletCampaignSeals .portletItem .more-info {
     padding: 10px;
 }
 .progress-bar {
+    float: none;
+    width: auto;
     margin: 5px;
     border: 1px solid #555555;
     height: 19px;
@@ -1012,7 +1014,7 @@ a.button:hover:hover {
   position:relative;
   color:black; 
   background-color: white;
-  padding: 5px;
+  padding: 5px 0;
 }
 .progress-bar span.value{
   display: none;
@@ -1020,12 +1022,12 @@ a.button:hover:hover {
 /* color bar */
 .progress-bar div.progress{
   position:absolute;
-  margin: -5px 1px 0 -5px;
+  margin: -5px 1px 0 -2px;
   width:0;
   height: 20px;
   overflow:hidden;
   background-color:#666;
-  padding: 5px 0;
+  padding: 5px;
 }
 /* text on bar */
 .progress-bar div.progress .text{
