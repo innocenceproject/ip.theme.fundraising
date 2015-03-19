@@ -1599,6 +1599,12 @@ body.template-donors.portaltype-collective-salesforce-fundraising #content {
     .field-preview table {
         width: 100% !important;
     }
+    #formfield-form-widgets-image {
+        overflow: hidden;
+    }
+    #formfield-form-widgets-image input {
+        font-size: 80% !important;
+    }
 }
 
 /* ********************** 480 ********************** */
