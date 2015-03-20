@@ -1098,6 +1098,9 @@ a.button:hover:hover {
 #content .login-portlet-wrapper .formTabs {
   display: none;
 }
+.enableFormTabbing .autotoc-nav {
+    display: none !important;
+}
 
 #edit-bar {
     background-color: #993300;
