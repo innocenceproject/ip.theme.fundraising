@@ -68,13 +68,14 @@ a {
     color: #555555;
 }
 h2 {
-    background: url("/++theme++ip.theme.fundraising/img/section-header-background.png") left 35px no-repeat;
+    background: url("/++theme++ip.theme.fundraising/img/section-header-background.png") left bottom 15px no-repeat;
     color: #993300;
     font-weight: normal;
     font-size: 21px;
-    height: 29px;
+    min-height: 29px;
     padding: 9px 10px 20px 40px;
     margin: 0 0 0 -40px;
+    line-height: 28px;
 }
 li#portaltab-donate a {
     border-bottom: 1px solid #ffffff;
