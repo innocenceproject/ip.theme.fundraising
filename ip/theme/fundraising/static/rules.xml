@@ -85,7 +85,7 @@
     <before css:theme="#content" css:content="#personal-campaign-toolbar" />
 
     <!-- plone messages -->
-    <prepend css:theme="#content" css:content=".portalMessage" />
+    <prepend css:theme="#content" css:content=".portalMessage" css:if-not-content=".template-create-personal-campaign-page" />
     
     <!-- analytics -->
     <after css:theme-children="body" css:content="#portal-footer-wrapper script" />
