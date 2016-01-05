@@ -1398,6 +1398,10 @@ body.template-donors.portaltype-collective-salesforce-fundraising #content {
 #content #double-the-donation a:link {
     border: none;
 }
+.form-buttons .noback {
+    color: #ff0000;
+    display: none;
+}
 
 /* ********************** 991 ********************** */
 @media screen and (max-width: 991px) {
