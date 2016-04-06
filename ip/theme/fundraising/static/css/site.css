@@ -2,14 +2,13 @@
     clear: both
 }
 body {
-    background-color: #404146;
+    background-color: #fff;
     font-family: Arial, sans-serif;
 }
 #page-wrapper {
     width: 958px;
     margin: 45px auto;
     clear: both;
-    box-shadow: 0 0 5px #111111;
     background-color: #ffffff;
     padding: 0;
 }
@@ -44,7 +43,6 @@ a {
     font-size: 24px;
 }
 .article-header-big {
-    background: #cc9900 url("/++theme++ip.theme.fundraising/img/page-header-background.png") repeat-x;
     color: black;
     height: 88px;
     margin: 0 0 10px 0;
