@@ -31,8 +31,8 @@ a {
     text-decoration: underline;
 }
 .article-header {
-    background: #cc9900 url("/++theme++ip.theme.fundraising/img/page-header-small-background.png") repeat-x;
-    color: black;
+    background-color: #372928;
+    color: #fff;
     height: 49px;
     padding: 10px 30px;
 }
@@ -41,6 +41,7 @@ a {
     padding: 5px 0;
     line-height: 1.2em;
     font-size: 24px;
+    color: #fff;
 }
 .article-header-big {
     color: black;
@@ -959,7 +960,7 @@ dl.portlet.portletCampaignFundraisers a.button {
 a.button,
 a.button:visited,
 a.button:hover {
-    background: url("/++theme++ip.theme.fundraising/img/button.png") no-repeat;
+    background-color: #372928;
     color: white !important;
     display: block;
     text-align: center;
@@ -973,6 +974,7 @@ a.button:hover {
     border: none !important;
     cursor: pointer;
     box-shadow: none;
+    border-radius: 5px;
 }
 .donation-form-wrapper .recurly button:hover,
 .form-buttons input:hover,
