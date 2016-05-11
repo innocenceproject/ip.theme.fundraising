@@ -920,14 +920,14 @@ dl.portlet.portletCampaignFundraisers .count-text {
     line-height: 17px;
 }
 dl.portlet.portletCampaignFundraisers a.button {
-    background: url("/++theme++ip.theme.fundraising/img/button.png") no-repeat;
+    background-color: #372928;
     font-size: 14px;
     width: 175px;
     margin: 10px auto 10px;
     text-align: center;
     padding: 8px 0;
     border: 0;
-    border-radius: 0;
+    border-radius: 5px;
 }
 .donor-quote {
     text-align: left;
